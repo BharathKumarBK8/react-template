@@ -1,8 +1,9 @@
 {
   "logo": {
-    "text": "Demo Application"
+    "text": "",
+    "img":""
   },
-  "showSearch": false,
+  "showSearch": true,
   "showAlarm": false,
 
   "profile": [

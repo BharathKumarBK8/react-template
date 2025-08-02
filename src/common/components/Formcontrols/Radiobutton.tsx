@@ -92,6 +92,11 @@ const Radiobutton = forwardRef<FormFieldRef, RadioButtonProps>(
 
     const handleChange = (e: RadioButtonChangeEvent) => {
       const newValue = e.value;
+      console.log("RadioButton - Value changing:", {
+        name: data.name,
+        oldValue: Array.isArray(selected) ? selected[0]?.key : null,
+        newValue: newValue.key,
+      });
 
       setSelected([newValue]);
 
@@ -102,6 +107,10 @@ const Radiobutton = forwardRef<FormFieldRef, RadioButtonProps>(
     };
 
     const handleBlur = () => {
+      console.log("RadioButton - Blur event:", {
+        name: data.name,
+        value: Array.isArray(selected) ? selected[0]?.key : null,
+      });
       setError(
         validateRequired(
           Array.isArray(selected) ? selected[0]?.key : "",

@@ -9,8 +9,8 @@
       "Path": "Testapp",
       "tokenURL": "test",
       "clientID": "test",
-      "clientSecret": "/123",
-      "grantType": "www"
+      "clientSecret": "1234",
+      "grantType": "test"
     }
   }
 }

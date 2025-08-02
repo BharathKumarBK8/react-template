@@ -60,6 +60,11 @@ const DropDown = forwardRef<FormFieldRef, DropDownProps>(({ data }, ref) => {
 
   const handleChange = (e: DropdownChangeEvent) => {
     const newValue = e.value;
+    console.log("Dropdown - Value changing:", {
+      name: data.name,
+      oldValue: selected,
+      newValue: newValue,
+    });
 
     setSelected(newValue);
 
@@ -86,6 +91,10 @@ const DropDown = forwardRef<FormFieldRef, DropDownProps>(({ data }, ref) => {
   }`;
 
   const handleBlur = () => {
+    console.log("Dropdown - Blur event:", {
+      name: data.name,
+      value: selected,
+    });
     setError(validateRequired(selected, data.error));
   };
 

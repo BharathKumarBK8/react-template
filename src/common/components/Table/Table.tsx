@@ -59,6 +59,7 @@ function Table(props: TABLE_DATA) {
     if (props.data?.url) {
       getData(props.data?.url)
         .then((data) => {
+          console.log("Data Fetched:", data);
           if (data && Array.isArray(data)) {
             setTableData(data);
           }
@@ -275,6 +276,10 @@ function Table(props: TABLE_DATA) {
 
   const onEdit = (rowData: TABLE_RESPONSE_MODEL) => {
     try {
+      console.log("Edit clicked for row:", rowData);
+      console.log("id", rowData.id);
+
+      // Add setTimeout before navigation
       navigate(`${location.pathname}/${rowData.id}/edit`, {
         state: { rowData, returnUrl: location.pathname, id: rowData.id },
       });

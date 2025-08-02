@@ -20,6 +20,7 @@ function CardWithLine(props: CARD_WITH_LINE_DATA) {
           props.data?.apiUrl || " "
         );
         if (response) {
+          console.log("response", response);
           createChart(response);
           setValues(response.value || null);
           setPercentage(response.percentage || null);

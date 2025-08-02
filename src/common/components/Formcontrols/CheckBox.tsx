@@ -87,6 +87,7 @@ const CheckBox = forwardRef<FormFieldRef, CheckboxProps>(({ data }, ref) => {
           setSelected(selectedCategories);
         }
       } else {
+        console.log("CheckBox setValue expected array but received:", value);
         setSelected([]);
       }
     },

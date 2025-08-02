@@ -109,6 +109,11 @@ const DateTime = forwardRef<FormFieldRef, DateTimeProps>(({ data }, ref) => {
 
   const handleChange = (e: any) => {
     const newValue = e.value;
+    console.log("DateTime - Value changing:", {
+      name: data.name,
+      oldValue: dateValue,
+      newValue: newValue,
+    });
 
     setDateValue(newValue);
     if (error) {
@@ -123,6 +128,11 @@ const DateTime = forwardRef<FormFieldRef, DateTimeProps>(({ data }, ref) => {
   };
 
   const handleBlur = () => {
+    console.log("DateTime - Blur event:", {
+      name: data.name,
+      value: dateValue,
+    });
+
     const validationError = validateInput(
       getDateValueForValidation(dateValue),
       data.validation!,

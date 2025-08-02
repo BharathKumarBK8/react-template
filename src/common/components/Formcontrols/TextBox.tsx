@@ -40,7 +40,7 @@ export interface TextboxProps {
   data: TEXTBOX_DATA;
 }
 
-const TextArea = forwardRef<FormFieldRef, TextboxProps>(({ data }, ref) => {
+  const TextArea = forwardRef<FormFieldRef, TextboxProps>(({ data }, ref) => {
   const [inputValue, setInputValue] = useState<string | boolean>("");
   const [error, setError] = useState<ErrorModel | null>(null);
   const [localKey, setLocalKey] = useState<string>("initial");
@@ -78,12 +78,14 @@ const TextArea = forwardRef<FormFieldRef, TextboxProps>(({ data }, ref) => {
 
   // Initialize and update input value when data.value changes
   useEffect(() => {
+    console.log("Setting value on mount or update:", data.name, data.value);
     if (data.value !== undefined) {
       if (data.inputType === "inputtoggle") {
         setInputValue(data.value === true || data.value === "yes");
       } else if (data.inputType === "mask" && typeof data.value === "string") {
         setLocalKey(`${data.name}-${Date.now()}`);
         setInputValue(data.value);
+        console.log("inputValue state after set:", data.value);
       } else {
         setInputValue(data.value);
       }
@@ -104,6 +106,12 @@ const TextArea = forwardRef<FormFieldRef, TextboxProps>(({ data }, ref) => {
   };
 
   const updateValue = (newValue: string | boolean) => {
+    console.log("TextArea - Value changing:", {
+      name: data.name,
+      oldValue: inputValue,
+      newValue: newValue,
+    });
+
     if (error) {
       const validationError = validateInput(
         newValue.toString(),
@@ -124,6 +132,8 @@ const TextArea = forwardRef<FormFieldRef, TextboxProps>(({ data }, ref) => {
     );
     setError(validationError);
   };
+
+  console.log("InputMask render value:", inputValue);
 
   return (
     <div className="form-group">
