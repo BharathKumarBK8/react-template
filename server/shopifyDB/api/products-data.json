@@ -1,0 +1,57 @@
+[
+  {
+    "id": "1",
+    "product": "Classic T-Shirt",
+    "status": "Active",
+    "inventory": "125 in stock",
+    "saleschannels": "3",
+    "markets": "2",
+    "category": "Fashion",
+    "type": "t-shirt",
+    "vendor": "xyz company"
+  },
+  {
+    "id": "2",
+    "product": "Checked T-Shirt",
+    "status": "Active",
+    "inventory": "125 in stock",
+    "saleschannels": "3",
+    "markets": "2",
+    "category": "Fashion",
+    "type": "t-shirt",
+    "vendor": "xyz company"
+  },
+  {
+    "id": "3",
+    "product": "Plain T-Shirt",
+    "status": "InActive",
+    "inventory": "125 in stock",
+    "saleschannels": "4",
+    "markets": "9",
+    "category": "Fashion",
+    "type": "t-shirt",
+    "vendor": "xyz company"
+  },
+  {
+    "id": "4",
+    "product": "T-Shirt",
+    "status": "Active",
+    "inventory": "125 in stock",
+    "saleschannels": "3",
+    "markets": "2",
+    "category": "Fashion",
+    "type": "t-shirt",
+    "vendor": "xyz company"
+  },
+  {
+    "product": "test",
+    "status": "Active",
+    "inventory": "test",
+    "saleschannels": "5",
+    "markets": "6",
+    "category": "test",
+    "type": "test",
+    "vendor": "test",
+    "id": "1mW-pzM"
+  }
+]

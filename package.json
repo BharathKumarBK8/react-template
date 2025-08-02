@@ -1,0 +1,63 @@
+{
+  "name": "app-name",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@react-keycloak/web": "^3.4.0",
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^16.1.0",
+    "@testing-library/user-event": "^13.2.1",
+    "@types/jest": "^27.0.1",
+    "@types/node": "^16.7.13",
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "@types/react-router-dom": "^5.3.3",
+    "axios": "^1.7.9",
+    "bootstrap": "^5.3.3",
+    "bootstrap-icons": "^1.11.3",
+    "chart.js": "^4.4.7",
+    "cors": "^2.8.5",
+    "json-server": "^1.0.0-beta.3",
+    "keycloak-js": "^26.1.0",
+    "primeicons": "^7.0.0",
+    "primereact": "^10.9.2",
+    "react": "^19.0.0",
+    "react-bootstrap-icons": "^1.11.5",
+    "react-dom": "^19.0.0",
+    "react-router-dom": "^7.1.1",
+    "react-scripts": "5.0.1",
+    "typescript": "^4.4.2",
+    "web-vitals": "^2.1.0"
+  },
+  "scripts": {
+    "start": "concurrently \"yarn start-servers\" \"react-scripts start\"",
+    "start-shopify": "concurrently \"yarn start-shopifyDB\" \"react-scripts start\"",
+    "start-servers": "node server/server.js",
+    "start-shopifyDB": "node server/server.js shopifyDB",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.17.15",
+    "concurrently": "^9.1.2"
+  }
+}

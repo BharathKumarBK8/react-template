@@ -1,0 +1,65 @@
+[
+  {
+    "path": "/analytics",
+    "configPath": "dashboard",
+    "isPrivate": false
+  },
+  {
+    "path": "/orders/drafts",
+    "configPath": "formcontrol",
+    "isPrivate": true
+  },
+  {
+    "path": "/orders",
+    "configPath": "orders",
+    "isPrivate": true
+  },
+  {
+    "path": "/orders/add",
+    "configPath": "formcontrol",
+    "isPrivate": true
+  },
+  {
+    "path": "/orders/:id/edit",
+    "configPath": "formcontrol",
+    "isPrivate": true
+  },
+  {
+    "path": "/products/",
+    "configPath": "products",
+    "isPrivate": true
+  },
+  {
+    "path": "/products/add",
+    "configPath": "product-form",
+    "isPrivate": true
+  },
+  {
+    "path": "/products/:id/edit",
+    "configPath": "product-form",
+    "isPrivate": true
+  },
+  {
+    "path": "/marketing",
+    "configPath": "marketing",
+    "isPrivate": true
+  },
+  {
+    "path": "/customers",
+    "configPath": "formcontrol",
+    "isPrivate": false
+  },
+  {
+    "path": "/customers/segments",
+    "configPath": "orders_draft",
+    "isPrivate": false
+  },
+  {
+    "path": "/apps/testApp",
+    "configPath": "/TestApp/bundle.js",
+    "externalApp": {
+      "name": "TestApp",
+      "url": "/TestApp/bundle.js"
+    }
+  }
+]

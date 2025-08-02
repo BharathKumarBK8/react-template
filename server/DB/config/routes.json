@@ -1,0 +1,31 @@
+[
+  {
+    "path": "/samplepage",
+    "configPath": "samplepage",
+    "isPrivate": false
+  },
+  {
+    "path": "/samplepage/sampleform",
+    "configPath": "sampleform",
+    "isPrivate": true
+  },
+
+  {
+    "path": "/samplepage/add",
+    "configPath": "sampleform",
+    "isPrivate": true
+  },
+  {
+    "path": "/samplepage/:id/edit",
+    "configPath": "sampleform",
+    "isPrivate": true
+  },
+  {
+    "path": "/apps/testApp",
+    "configPath": "/TestApp/bundle.js",
+    "externalApp": {
+      "name": "TestApp",
+      "url": "/TestApp/bundle.js"
+    }
+  }
+]

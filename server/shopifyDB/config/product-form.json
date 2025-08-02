@@ -1,0 +1,214 @@
+{
+  "title": "Edit Product",
+  "columns": [
+    {
+      "name": "product-form",
+      "size": {
+        "xl": 12,
+        "lg": 12,
+        "md": 12,
+        "sm": 12
+      },
+      "type": "form",
+      "content": {
+        "formApi": {
+          "getUrl": "products-data",
+          "postUrl": "products-data",
+          "updateUrl": "products-data/<id>"
+        },
+        "fields": [
+          {
+            "type": "textbox",
+            "size": {
+              "xl": 6,
+              "lg": 6,
+              "md": 12,
+              "sm": 12
+            },
+            "content": {
+              "inputType": "text",
+              "name": "product",
+              "placeholder": "Enter product name",
+              "value": "",
+              "title": {
+                "text": "Product"
+              },
+              "validation": {
+                "required": true
+              }
+            }
+          },
+          {
+            "type": "dropdown",
+            "size": {
+              "xl": 6,
+              "lg": 6,
+              "md": 12,
+              "sm": 12
+            },
+            "content": {
+              "name": "status",
+              "value": "",
+              "title": {
+                "text": "Status"
+              },
+              "validation": {
+                "required": true
+              },
+              "options": [
+                { "value": "Active", "label": "Active" },
+                { "value": "Inactive", "label": "Inactive" }
+              ]
+            }
+          },
+          {
+            "type": "textbox",
+            "size": {
+              "xl": 6,
+              "lg": 6,
+              "md": 12,
+              "sm": 12
+            },
+            "content": {
+              "inputType": "text",
+              "name": "inventory",
+              "placeholder": "Enter inventory count",
+              "value": "",
+              "title": {
+                "text": "Inventory"
+              },
+              "validation": {
+                "required": true
+              }
+            }
+          },
+          {
+            "type": "textbox",
+            "size": {
+              "xl": 6,
+              "lg": 6,
+              "md": 12,
+              "sm": 12
+            },
+            "content": {
+              "inputType": "number",
+              "name": "saleschannels",
+              "placeholder": "Enter number of sales channels",
+              "value": "",
+              "title": {
+                "text": "Sales Channels"
+              },
+              "validation": {
+                "required": true,
+                "type_check": true
+              }
+            }
+          },
+          {
+            "type": "textbox",
+            "size": {
+              "xl": 6,
+              "lg": 6,
+              "md": 12,
+              "sm": 12
+            },
+            "content": {
+              "inputType": "number",
+              "name": "markets",
+              "placeholder": "Enter number of markets",
+              "value": "",
+              "title": {
+                "text": "Markets"
+              },
+              "validation": {
+                "required": true,
+                "type_check": true
+              }
+            }
+          },
+          {
+            "type": "textbox",
+            "size": {
+              "xl": 6,
+              "lg": 6,
+              "md": 12,
+              "sm": 12
+            },
+            "content": {
+              "inputType": "text",
+              "name": "category",
+              "placeholder": "Enter product category",
+              "value": "",
+              "title": {
+                "text": "Category"
+              },
+
+              "validation": {
+                "required": true
+              }
+            }
+          },
+          {
+            "type": "textbox",
+            "size": {
+              "xl": 6,
+              "lg": 6,
+              "md": 12,
+              "sm": 12
+            },
+            "content": {
+              "inputType": "text",
+              "name": "type",
+              "placeholder": "Enter product type",
+              "value": "",
+              "title": {
+                "text": "Type"
+              },
+
+              "validation": {
+                "required": true
+              }
+            }
+          },
+          {
+            "type": "textbox",
+            "size": {
+              "xl": 6,
+              "lg": 6,
+              "md": 12,
+              "sm": 12
+            },
+            "content": {
+              "inputType": "text",
+              "name": "vendor",
+              "placeholder": "Enter vendor name",
+              "value": "",
+              "title": {
+                "text": "Vendor"
+              },
+
+              "validation": {
+                "required": true
+              }
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "buttons": [
+    {
+      "id": "form_clear",
+      "type": "button",
+      "text": "Clear",
+      "theme": "btn_grey"
+    },
+    {
+      "id": "form_save",
+      "type": "submit",
+      "text": "Save Changes",
+      "theme": "btn_black",
+      "path": "/products"
+    }
+  ]
+}

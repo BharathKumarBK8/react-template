@@ -1,0 +1,16 @@
+{
+  "id": "oms",
+  "name": "TestApp",
+  "url": "/TestApp/bundle.js",
+  "appData": {
+    "target": "samplepage",
+    "data": {
+      "hostURL": "http://localhost:5003/",
+      "Path": "Testapp",
+      "tokenURL": "test",
+      "clientID": "test",
+      "clientSecret": "/123",
+      "grantType": "www"
+    }
+  }
+}

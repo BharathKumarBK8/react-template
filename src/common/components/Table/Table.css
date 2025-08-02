@@ -1,0 +1,295 @@
+:root {
+  --card-bg: #ffffff;
+  --card-border: #e0e0e0;
+  --menu-item-color: #666;
+  --menu-item-hover-bg: #f5f5f5;
+  --menu-item-hover-color: #333;
+  --title-color: #333;
+  --title-hover-color: #0066cc;
+  --thead-bg: #f8f9fa;
+  --th-color: #444;
+  --th-border-color: #dee2e6;
+  --td-color: #666;
+  --td-border-color: #dee2e6;
+  --tr-hover-bg: #f8f9fa;
+  --btn-grey-bg: #f5f5f5;
+  --btn-grey-border: #ddd;
+  --btn-grey-hover: #e5e5e5;
+  --btn-black-bg: #000;
+  --btn-black-color: #fff;
+  --btn-black-hover: #333;
+}
+
+/* Card Styles */
+.table-card {
+  background: var(--card-bg);
+  border-radius: 12px !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+/* Menu Styles */
+
+.table-header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+}
+
+.global-search {
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #ced4da;
+  width: 150px !important;
+}
+
+.global-search:focus {
+  outline: none;
+  border-color: #2196F3;
+  box-shadow: 0 0 0 0.2rem rgba(33, 150, 243, 0.25);
+}
+
+.table-body {
+  padding: 0px;
+}
+/* PrimeReact DataTable Customization */
+.p-datatable {
+  font-family: "Inter", serif;
+  
+}
+.p-datatable-header{
+  border-radius: 12px 12px 0px 0px;
+  background-color: white;
+  border-width: 1px 0px 0px 0px;
+}
+
+.p-datatable .p-datatable-wrapper {
+  border: none !important;
+  overflow-x: auto;
+  
+}
+
+.p-datatable .p-datatable-thead > tr > th {
+  background: var(--thead-bg);
+  color: var(--th-color) ;
+  padding: 12px 16px ;
+  text-align: left;
+  font-weight: 600 ;
+  font-size: 14px ;
+  transition: all 0.2s ease;
+  width:170px;
+}
+
+.p-datatable .p-datatable-tbody > tr > td {
+  padding: 12px 16px ;
+  font-size: 14px ;
+  color: var(--td-color) ;
+  border-bottom: 1px solid var(--td-border-color);
+}
+
+.p-datatable .p-datatable-tbody > tr:hover {
+  background-color: var(--tr-hover-bg);
+  cursor: pointer;
+} 
+
+.p-column-filter-menu-button{
+      border-radius: 6px;
+    margin-left: 6px;
+    background: lightgrey;
+}
+
+/* Sort Icon Styles */
+.p-sortable-column .p-sortable-column-icon {
+  font-size: 14px;
+  margin-left: 6px;
+  color: var(--th-color);
+}
+
+.p-sortable-column:hover {
+  background: var(--menu-item-hover-bg) !important;
+  color: var(--menu-item-hover-color) !important;
+}
+
+/* Paginator Styles */
+.p-paginator {
+  justify-content: center !important;
+  border-radius: 0px 0px 12px 12px !important;
+  padding: 6px 12px !important;
+  background: transparent !important;
+  border: none !important;
+}
+
+.p-paginator .p-paginator-prev,
+.p-paginator .p-paginator-next {
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  color: rgba(48, 48, 48, 1) !important;
+  background: rgba(235, 235, 235, 1) !important;
+  border: none !important;
+  padding: 6px 12px !important;
+  transition: background 0.2s, color 0.2s !important;
+}
+
+.p-paginator .p-paginator-prev {
+  border-radius: 10px 0px 0px 10px !important;
+  border-right: 2px solid white !important;
+}
+
+.p-paginator .p-paginator-next {
+  border-radius: 0px 10px 10px 0px !important;
+}
+
+.p-paginator .p-paginator-prev:hover,
+.p-paginator .p-paginator-next:hover {
+  background: lightgray !important;
+}
+
+.p-paginator .p-disabled {
+  opacity: 0.5 !important;
+  cursor: not-allowed !important;
+}
+
+/* Status Tag Styles */
+.status-tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 12px;
+  font-size: 12px;
+  font-weight: 500;
+  border-radius: 6px;
+  text-transform: capitalize;
+  min-width: 80px;
+  transition: all 0.2s ease-in-out;
+}
+
+.status-in.progress {
+  background-color: rgba(213, 235, 255, 1);
+  color: rgba(0, 58, 90, 1);
+}
+
+.status-success {
+  background-color: rgba(0, 0, 0, 0.06);
+  color: rgba(97, 97, 97, 1);
+}
+
+.status-warning {
+  background-color: rgba(234, 179, 8, 0.1);
+  color: rgb(234, 179, 8);
+  border: 1px solid rgba(234, 179, 8, 0.2);
+}
+
+.status-danger {
+  background-color: rgba(239, 68, 68, 0.1);
+  color: rgb(239, 68, 68);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+.status-info {
+  background-color: rgba(59, 130, 246, 0.1);
+  color: rgb(59, 130, 246);
+  border: 1px solid rgba(59, 130, 246, 0.2);
+}
+.column-filter.p-dropdown {
+  width: 200px;
+}
+
+.p-dropdown-panel .p-dropdown-items {
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.p-dropdown-panel .p-dropdown-item {
+  padding: 0.5rem 1rem;
+}
+
+.p-dropdown .p-dropdown-clear-icon {
+  right: 2.5rem;
+}
+.p-column-filter-row-items{
+  padding-left: 0;
+  margin-bottom: 0;
+}
+.array-cell {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.array-item {
+  background-color: #f0f0f0;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .p-datatable-wrapper {
+    overflow-x: auto;
+  }
+
+  .p-datatable .p-datatable-thead > tr > th,
+  .p-datatable .p-datatable-tbody > tr > td {
+    padding: 8px 12px !important;
+  }
+  .status-tag {
+    padding: 3px 8px;
+    font-size: 11px;
+    min-width: 70px;
+  }
+
+  .p-paginator {
+    justify-content: center !important;
+  }
+}
+
+/* Button Styles */
+.btn_grey {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.btn_black {
+  font-size: 12px;
+  font-weight: 600;
+}
+.action-buttons {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.action-buttons .p-button {
+  padding: 0.5rem;
+}
+
+.action-buttons .p-button-rounded {
+  width: 2rem;
+  height: 2rem;
+}
+.action-buttons .edit-action{  
+  background-color:#ddd ;
+  width: 60px;
+  font-size: 12px;
+  box-shadow: 0rem -.0625rem 0rem 0rem #b5b5b5 inset, 0rem 0rem 0rem .0625rem rgba(0, 0, 0, .1) inset, 0rem .03125rem 0rem .09375rem #FFF inset;
+  border-color: transparent;
+  border-radius: .5rem;
+  color: #303030;
+}
+.action-buttons .delete-action{
+  background-color: white;
+  width: 60px;
+  border-color:transparent;
+  font-size: 12px;  
+  border-radius: .5rem;
+  box-shadow: 0rem -.0625rem 0rem 0rem #b5b5b5 inset, 0rem 0rem 0rem .0625rem rgba(0, 0, 0, .1) inset, 0rem .03125rem 0rem .09375rem #FFF inset;
+  color: rgba(142, 11, 33, 1);
+
+}

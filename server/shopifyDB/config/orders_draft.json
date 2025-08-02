@@ -1,0 +1,96 @@
+{
+  "title": "Draft:",
+  "buttons": [
+    {
+      "type": "button",
+      "text": "Export",
+      "theme": "btn_grey"
+    },
+    {
+      "type": "button",
+      "text": "More Actions",
+      "theme": "btn_grey"
+    },
+    {
+      "type": "button",
+      "text": "Create Order",
+      "theme": "btn_black"
+    }
+  ],
+  "columns": [
+    {
+      "size": {
+        "xl": 12,
+        "lg": 12,
+        "md": 12,
+        "sm": 12
+      },
+      "type": "table",
+      "content": {
+        "options": {
+          "title": {},
+          "columns": [
+            {
+              "type": "text",
+              "label": "Order",
+              "name": "order"
+            },
+            {
+              "type": "datetime",
+              "label": "Date",
+              "name": "date"
+            },
+            {
+              "type": "text",
+              "label": "Customer",
+              "name": "customer"
+            },
+            {
+              "type": "text",
+              "label": "Channel",
+              "name": "channel"
+            },
+            {
+              "type": "currency",
+              "label": "Total",
+              "name": "total"
+            },
+            {
+              "type": "status",
+              "label": "Payment status",
+              "name": "payment_status"
+            },
+            {
+              "type": "status",
+              "label": "Fulfillment status",
+              "name": "fulfillment_status"
+            },
+            {
+              "type": "text",
+              "label": "Items",
+              "name": "items"
+            },
+            {
+              "type": "status",
+              "label": "Delivery status",
+              "name": "delivery_status"
+            },
+            {
+              "type": "text",
+              "label": "Delivery method",
+              "name": "delivery_method"
+            },
+            {
+              "type": "tag",
+              "label": "Tags",
+              "name": "tags"
+            }
+          ]
+        },
+        "data": {
+          "url": "orders-data"
+        }
+      }
+    }
+  ]
+}

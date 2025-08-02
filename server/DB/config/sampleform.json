@@ -1,0 +1,155 @@
+{
+  "title": "Sample Form",
+  "columns": [
+    {
+      "name": "sampleform",
+      "size": {
+        "xl": 12,
+        "lg": 12,
+        "md": 12,
+        "sm": 12
+      },
+      "type": "form",
+      "content": {
+        "id": "sampleform",
+        "formApi": {
+          "getUrl": "sample-table-data",
+          "postUrl": "sample-table-data",
+          "updateUrl": "sample-table-data/<id>"
+        },
+        "fields": [
+          {
+            "type": "textbox",
+            "content": {
+              "name": "col1",
+              "inputType": "text",
+              "placeholder": "Enter a value",
+              "position": "horizontal",
+              "value": "",
+              "title": {
+                "text": "Column 1"
+              },
+              "validation": {
+                "required": true,
+                "type_check": true
+              },
+              "onError": {
+                "position": "below",
+                "message": {
+                  "required": "Column 1 is required",
+                  "type_check": "Invalid format"
+                }
+              }
+            },
+            "size": {
+              "xl": 6,
+              "lg": 6,
+              "md": 12,
+              "sm": 12
+            }
+          },
+          {
+            "type": "textbox",
+            "content": {
+              "name": "col2",
+              "inputType": "text",
+              "placeholder": "Enter a value",
+              "position": "horizontal",
+              "value": "",
+              "title": {
+                "text": "Column 2"
+              },
+              "validation": {
+                "required": true,
+                "type_check": true
+              },
+              "onError": {
+                "position": "below",
+                "message": {
+                  "required": "Column 2 is required",
+                  "type_check": "Invalid format"
+                }
+              }
+            },
+            "size": {
+              "xl": 6,
+              "lg": 6,
+              "md": 12,
+              "sm": 12
+            }
+          },
+          {
+            "type": "dropdown",
+            "size": {
+              "xl": 6,
+              "lg": 6,
+              "md": 12,
+              "sm": 12
+            },
+            "content": {
+              "position": "horizontal",
+              "name": "col3",
+              "value": "",
+              "title": {
+                "text": "Column 3"
+              },
+              "options": [
+                { "value": "option 1", "label": "Option 1" },
+                { "value": "option 2", "label": "Option 2" },
+                { "value": "option 3", "label": "Option 3" }
+              ],
+              "validation": {
+                "required": true
+              }
+            }
+          },
+          {
+            "type": "textbox",
+            "content": {
+              "name": "col4",
+              "inputType": "text",
+              "placeholder": "Enter a value",
+              "position": "horizontal",
+              "value": "",
+              "title": {
+                "text": "Column 4"
+              },
+              "validation": {
+                "required": true,
+                "type_check": true
+              },
+              "onError": {
+                "position": "below",
+                "message": {
+                  "required": "Column 4 is required",
+                  "type_check": "Invalid format"
+                }
+              }
+            },
+            "size": {
+              "xl": 6,
+              "lg": 6,
+              "md": 12,
+              "sm": 12
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "buttons": [
+    {
+      "id": "form_clear",
+      "type": "button",
+      "text": "Clear",
+      "theme": "btn_grey"
+    },
+    {
+      "id": "form_save",
+      "type": "button",
+      "text": "Save",
+      "theme": "btn_black",
+      "path": "/samplepage"
+    }
+  ]
+}

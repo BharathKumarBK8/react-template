@@ -1,0 +1,173 @@
+{
+  "marketing-online_store_sessions": {
+    "value": "142,777",
+    "percentage": "7",
+    "data": [
+      [60, 30, 25, 70, 72, 74, 65],
+      [30, 18, 25, 70, 100, 45, 60]
+    ],
+    "bgcolor": [
+      "rgba(9,156,221,1)",
+      "rgba(63,179,234,0.5)",
+      "rgba(63,179,234,0)"
+    ]
+  },
+  "marketing-online_store_conversionrate": {
+    "value": "2.3%",
+    "percentage": "14",
+    "data": [
+      [60, 30, 25, 70, 72, 74, 65],
+      [30, 18, 25, 70, 100, 45, 60]
+    ],
+    "bgcolor": [
+      "rgba(9,156,221,1)",
+      "rgba(63,179,234,0.5)",
+      "rgba(63,179,234,0)"
+    ]
+  },
+  "marketing-avg_order_value": {
+    "value": "$20.19",
+    "percentage": "9",
+    "data": [
+      [60, 30, 25, 70, 72, 74, 65],
+      [30, 18, 25, 70, 100, 45, 60]
+    ],
+    "bgcolor": [
+      "rgba(9,156,221,1)",
+      "rgba(63,179,234,0.5)",
+      "rgba(63,179,234,0)"
+    ]
+  },
+  "marketing-total_sales": {
+    "value": "$3,616,367.70",
+    "percentage": "220",
+    "data": [
+      [60, 30, 25, 70, 72, 74, 65],
+      [30, 18, 25, 70, 100, 45, 60]
+    ],
+    "bgcolor": [
+      "rgba(9,156,221,1)",
+      "rgba(63,179,234,0.5)",
+      "rgba(63,179,234,0)"
+    ]
+  },
+  "marketing-sales": {
+    "value": "$79,974.98",
+    "percentage": "93",
+    "data": [
+      [45000, 47000, 48500, 51000, 49800, 52000, 54000, 50000],
+      [42000, 44000, 46000, 48000, 47000, 49000, 51000, 48000]
+    ],
+    "bgcolor": ["rgba(0,136,254,1)", "rgba(0,136,254,0.5)", "rgba(0,136,254,0)"]
+  },
+  "marketing-orders": {
+    "value": "3049",
+    "percentage": "97",
+    "data": [
+      [980, 1050, 1100, 1150, 1200, 1180, 1220, 1234],
+      [920, 950, 1000, 1080, 1150, 1130, 1180, 1200]
+    ],
+    "bgcolor": ["rgba(0,196,159,1)", "rgba(0,196,159,0.5)", "rgba(0,196,159,0)"]
+  },
+  "marketing-topchannels": [
+    {
+      "channel": "Facebook Ads",
+      "type": "Social Media",
+      "sales": "$12,500",
+      "session": "5,230",
+      "orders": "125",
+      "conversionrate": "2.39%",
+      "roas": "3.2x",
+      "cpa": "$25",
+      "cta": "Shop Now"
+    },
+    {
+      "channel": "Google Ads",
+      "type": "Search",
+      "sales": "$18,750",
+      "session": "4,890",
+      "orders": "156",
+      "conversionrate": "3.19%",
+      "roas": "4.1x",
+      "cpa": "$30",
+      "cta": "Buy Now"
+    },
+    {
+      "channel": "Email Marketing",
+      "type": "Direct",
+      "sales": "$9,800",
+      "session": "3,450",
+      "orders": "98",
+      "conversionrate": "2.84%",
+      "roas": "5.2x",
+      "cpa": "$15",
+      "cta": "View Offers"
+    },
+    {
+      "channel": "Facebook Ads",
+      "type": "Social Media",
+      "sales": "$12,500",
+      "session": "5,230",
+      "orders": "125",
+      "conversionrate": "2.39%",
+      "roas": "3.2x",
+      "cpa": "$25",
+      "cta": "Shop Now"
+    },
+    {
+      "channel": "Google Ads",
+      "type": "Search",
+      "sales": "$18,750",
+      "session": "4,890",
+      "orders": "156",
+      "conversionrate": "3.19%",
+      "roas": "4.1x",
+      "cpa": "$30",
+      "cta": "Buy Now"
+    },
+    {
+      "channel": "Email Marketing",
+      "type": "Direct",
+      "sales": "$9,800",
+      "session": "3,450",
+      "orders": "98",
+      "conversionrate": "2.84%",
+      "roas": "5.2x",
+      "cpa": "$15",
+      "cta": "View Offers"
+    },
+    {
+      "channel": "Facebook Ads",
+      "type": "Social Media",
+      "sales": "$12,500",
+      "session": "5,230",
+      "orders": "125",
+      "conversionrate": "2.39%",
+      "roas": "3.2x",
+      "cpa": "$25",
+      "cta": "Shop Now"
+    },
+    {
+      "channel": "Google Ads",
+      "type": "Search",
+      "sales": "$18,750",
+      "session": "4,890",
+      "orders": "156",
+      "conversionrate": "3.19%",
+      "roas": "4.1x",
+      "cpa": "$30",
+      "cta": "Buy Now"
+    },
+    {
+      "channel": "Email Marketing",
+      "type": "Direct",
+      "sales": "$9,800",
+      "session": "3,450",
+      "orders": "98",
+      "conversionrate": "2.84%",
+      "roas": "5.2x",
+      "cpa": "$15",
+      "cta": "View Offers"
+    }
+  ]
+}

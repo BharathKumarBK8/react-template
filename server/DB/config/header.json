@@ -1,0 +1,25 @@
+{
+  "logo": {
+    "text": "Demo Application"
+  },
+  "showSearch": false,
+  "showAlarm": false,
+
+  "profile": [
+    {
+      "id": "user_info",
+      "list": [
+        {
+          "id": "user_name",
+          "text": "",
+          "subtext": ""
+        },
+        {
+          "id": "user_actions",
+          "text": "Log Out",
+          "click": "logout"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "section": [
+    {
+      "id": "main",
+      "menuList": [
+        {
+          "id": "sample-page",
+          "label": "Sample Page",
+          "path": "/samplepage",
+          "isSelected": false,
+          "isPrivate": false,
+          "children": [
+            {
+              "id": "sample-form",
+              "label": "Sample Form",
+              "path": "/samplepage/sampleform",
+              "isSelected": false,
+              "isPrivate": true
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "footerdata": [
+    {
+      "id": "settings",
+      "label": "Settings",
+      "icon": "bi bi-gear",
+      "path": "/settings",
+      "isSelected": false,
+      "isPrivate": true
+    }
+  ]
+}

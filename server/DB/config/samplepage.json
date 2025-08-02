@@ -1,0 +1,147 @@
+{
+  "buttons": [
+    {
+      "id": "navigate",
+      "type": "button",
+      "text": "Add",
+      "theme": "btn_black",
+      "path": "/samplepage/add"
+    },
+    {
+      "id": "pushconfig",
+      "type": "button",
+      "text": "Push Config",
+      "theme": "btn_black"
+    }
+  ],
+  "title": "Sample Overview",
+  "columns": [
+    {
+      "size": {
+        "xl": 4,
+        "lg": 4,
+        "md": 6,
+        "sm": 12
+      },
+      "type": "card",
+      "content": {
+        "title": {
+          "text": "Sample Card"
+        }
+      }
+    },
+    {
+      "size": {
+        "xl": 3,
+        "lg": 6,
+        "md": 6,
+        "sm": 12
+      },
+      "type": "card_with_line",
+      "content": {
+        "options": {
+          "title": {
+            "text": "Sample Card-with-line"
+          },
+          "chart": {
+            "displayLegent": false
+          }
+        },
+        "data": {
+          "apiUrl": "sample-card-with-line-data"
+        }
+      }
+    },
+    {
+      "size": {
+        "xl": 4,
+        "lg": 4,
+        "md": 6,
+        "sm": 12
+      },
+      "type": "pie",
+      "content": {
+        "options": {
+          "title": {
+            "text": "Sample Pie"
+          },
+          "chart": {
+            "displayLegend": false
+          }
+        },
+        "data": {
+          "apiUrl": "sample-pie-data"
+        }
+      }
+    },
+    {
+      "size": {
+        "xl": 12,
+        "lg": 12,
+        "md": 12,
+        "sm": 12
+      },
+      "type": "table",
+      "content": {
+        "options": {
+          "title": {
+            "text": "Sample Table"
+          },
+          "columns": [
+            {
+              "type": "text",
+              "label": "Column 1",
+              "name": "col1",
+              "showSort": true,
+              "showFilter": true,
+              "filter": {
+                "showMenu": true,
+                "showDropdown": false,
+                "dropdownData": []
+              }
+            },
+            {
+              "type": "text",
+              "label": "Column 2",
+              "name": "col2",
+              "showSort": true,
+              "showFilter": true,
+              "filter": {
+                "showMenu": true,
+                "showDropdown": false,
+                "dropdownData": []
+              }
+            },
+            {
+              "type": "text",
+              "label": "Column 3",
+              "name": "col3",
+              "showSort": true,
+              "showFilter": true,
+              "filter": {
+                "showMenu": true,
+                "showDropdown": false,
+                "dropdownData": []
+              }
+            },
+            {
+              "type": "text",
+              "label": "Column 4",
+              "name": "col4",
+              "showSort": true,
+              "showFilter": true,
+              "filter": {
+                "showMenu": true,
+                "showDropdown": false,
+                "dropdownData": []
+              }
+            }
+          ]
+        },
+        "data": {
+          "url": "sample-table-data"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "logo": {
+    "img": "/assets/logo.png",
+    "text": "Shopify"
+  },
+  "showSearch": true,
+  "showAlarm": true,
+  "notifications": [
+    {
+      "id": "1",
+      "message": "Welcome to the platform!",
+      "timestamp": "2024-01-20T10:00:00Z",
+      "isRead": false
+    }
+  ],
+  "profile": [
+    {
+      "id": "store_list",
+      "list": [
+        {
+          "id": "first_store",
+          "text": "First Store",
+          "click": "new_tab",
+          "path": "/store/first_store",
+          "icon": "storeIcon"
+        },
+        {
+          "id": "my-store",
+          "text": "My Store",
+          "click": "new_tab",
+          "path": "/store/my_store",
+          "icon": "storeIcon"
+        },
+        {
+          "id": "all_store",
+          "text": "All stores",
+          "click": "new_tab",
+          "path": "/store/all_store",
+          "icon": "bi bi-shop"
+        }
+      ]
+    },
+    {
+      "id": "help",
+      "list": [
+        {
+          "id": "help_center",
+          "text": "Help Center",
+          "click": "new_tab",
+          "path": "/help/help-center"
+        },
+        {
+          "id": "help_center",
+          "text": "Changelog",
+          "click": "new_tab",
+          "path": "/help/help-center"
+        },
+        {
+          "id": "help_center",
+          "text": "Community forums",
+          "click": "new_tab",
+          "path": "/help/help-center"
+        },
+        {
+          "id": "help_center",
+          "text": "Hire a Shopify Partner",
+          "click": "new_tab",
+          "path": "/help/help-center"
+        },
+        {
+          "id": "help_center",
+          "text": "Keyboard shortcuts",
+          "click": "new_tab",
+          "path": "/help/help-center"
+        }
+      ]
+    },
+    {
+      "id": "user_info",
+      "list": [
+        {
+          "id": "user_name",
+          "text": "Suresh S",
+          "subText": "sureshkgm@gmail.com"
+        },
+        {
+          "id": "user_actions",
+          "text": "Manage account",
+          "click": "new_tab"
+        },
+        {
+          "id": "user_actions",
+          "text": "Log Out",
+          "click": "logout"
+        }
+      ]
+    }
+  ]
+}

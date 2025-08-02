@@ -1,0 +1,12 @@
+[
+  {
+    "id": "oms",
+    "name": "TestApp",
+    "url": "/TestApp/bundle.js"
+  },
+  {
+    "id": "app",
+    "name": "App",
+    "url": "/TestApp/bundle.js"
+  }
+]
