@@ -1,0 +1,203 @@
+{
+  "buttons": [
+    {
+      "id": "form_clear",
+      "type": "button",
+      "text": "Clear",
+      "style": {
+        "backgroundColor": "#6c757d",
+        "textColor": "#fff",
+        "borderColor": "#6c757d",
+        "boxShadow": "none",
+        "gradient": "none"
+      }
+    },
+    {
+      "id": "form_save",
+      "type": "button",
+      "text": "Save",
+      "style": {
+        "backgroundColor": "#000",
+        "textColor": "#fff",
+        "borderColor": "#000",
+        "boxShadow": "none",
+        "gradient": "none"
+      },
+      "path": "/patients/records"
+    }
+  ],
+  "title": "Patient Record Details",
+  "rowLayouts": [
+    {
+      "columns": [
+        {
+          "size": {
+            "xl": 12,
+            "lg": 12,
+            "md": 12,
+            "sm": 12
+          },
+          "elements": [
+            {
+              "name": "patient-record-form",
+              "type": "form",
+              "content": {
+                "id": "patient-record-form",
+                "formApi": {
+                  "getUrl": "patientrecords-data",
+                  "postUrl": "patientrecords-data",
+                  "updateUrl": "patientrecords-data/<id>"
+                },
+                "fields": [
+                  {
+                    "type": "textbox",
+                    "content": {
+                      "name": "PatientName",
+                      "inputType": "text",
+                      "placeholder": "Enter patient name",
+                      "position": "horizontal",
+                      "value": "",
+                      "title": {
+                        "text": "Patient Name"
+                      },
+                      "validation": {
+                        "required": true,
+                        "type_check": true
+                      },
+                      "onError": {
+                        "position": "below",
+                        "message": {
+                          "required": "Patient Name is required",
+                          "type_check": "Invalid format"
+                        }
+                      }
+                    },
+                    "size": {
+                      "xl": 6,
+                      "lg": 6,
+                      "md": 12,
+                      "sm": 12
+                    }
+                  },
+                  {
+                    "type": "textbox",
+                    "content": {
+                      "name": "Age",
+                      "inputType": "number",
+                      "placeholder": "Enter age",
+                      "position": "horizontal",
+                      "value": "",
+                      "title": {
+                        "text": "Age"
+                      },
+                      "validation": {
+                        "required": true,
+                        "type_check": true
+                      },
+                      "onError": {
+                        "position": "below",
+                        "message": {
+                          "required": "Age is required",
+                          "type_check": "Invalid format"
+                        }
+                      }
+                    },
+                    "size": {
+                      "xl": 6,
+                      "lg": 6,
+                      "md": 12,
+                      "sm": 12
+                    }
+                  },
+                  {
+                    "type": "dropdown",
+                    "size": {
+                      "xl": 6,
+                      "lg": 6,
+                      "md": 12,
+                      "sm": 12
+                    },
+                    "content": {
+                      "position": "horizontal",
+                      "name": "Gender",
+                      "value": "",
+                      "title": {
+                        "text": "Gender"
+                      },
+                      "options": [
+                        { "value": "Male", "label": "Male" },
+                        { "value": "Female", "label": "Female" },
+                        { "value": "Other", "label": "Other" }
+                      ],
+                      "validation": {
+                        "required": true
+                      }
+                    }
+                  },
+                  {
+                    "type": "textbox",
+                    "content": {
+                      "name": "ContactNumber",
+                      "inputType": "text",
+                      "placeholder": "Enter contact number",
+                      "position": "horizontal",
+                      "value": "",
+                      "title": {
+                        "text": "Contact Number"
+                      },
+                      "validation": {
+                        "required": true,
+                        "type_check": true
+                      },
+                      "onError": {
+                        "position": "below",
+                        "message": {
+                          "required": "Contact Number is required",
+                          "type_check": "Invalid format"
+                        }
+                      }
+                    },
+                    "size": {
+                      "xl": 6,
+                      "lg": 6,
+                      "md": 12,
+                      "sm": 12
+                    }
+                  },
+                  {
+                    "type": "textbox",
+                    "content": {
+                      "name": "LastVisit",
+                      "inputType": "date",
+                      "placeholder": "Select last visit date",
+                      "position": "horizontal",
+                      "value": "",
+                      "title": {
+                        "text": "Last Visit"
+                      },
+                      "validation": {
+                        "required": true
+                      },
+                      "onError": {
+                        "position": "below",
+                        "message": {
+                          "required": "Last Visit is required"
+                        }
+                      }
+                    },
+                    "size": {
+                      "xl": 6,
+                      "lg": 6,
+                      "md": 12,
+                      "sm": 12
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

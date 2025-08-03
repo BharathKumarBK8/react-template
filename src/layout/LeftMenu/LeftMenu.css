@@ -2,90 +2,81 @@
   .leftMenus {
     display: flex;
     flex-direction: column;
-    flex: 1 1;
     width: 240px;
     background-color: var(--leftmenu-bg-clr);
     height: calc(100vh - 56px);
-    padding: 15px;
-    float: left;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px var(--leftmenu-shadow-clr);
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
     justify-content: space-between;
   }
+
   .s-m-fw {
     font-weight: var(--leftmenu-s-m-fw-font-weight);
-    margin-left: 13px;
+    margin-left: 12px;
   }
+
   .leftMenus a i {
-    margin-right: 6.5px;
+    margin-right: 12px;
+    font-size: 18px;
   }
+
   .leftMenus a,
   .section-label {
     display: flex;
     align-items: center;
     color: var(--leftmenu-seclab-txt-clr);
     text-decoration: none;
-    border-radius: 6.5px;
-    transition: background-color 0.3s;
+    border-radius: 8px;
+    transition: all 0.2s ease;
     font-size: var(--leftmenu-font-size);
-    letter-spacing: 0.2px;
-    padding: 5.5px 3.25px 5.5px 6.5px;
-    /*background: violet; */
-    line-height: 17.25px;
+    padding: 12px 16px;
+    margin: 2px 0;
+    line-height: 1.4;
   }
+
   .leftMenus a:hover {
     background-color: var(--leftmenu-hover-bg-clr);
+    transform: translateX(4px);
   }
 
   .children {
     overflow: hidden;
-    transition: max-height 0.2s ease-in-out, opacity 0.3s ease-in-out;
-    max-height: 0; /* Initially hidden */
-    opacity: 0; /* Initially hidden */
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    max-height: 0;
+    opacity: 0;
+    margin-left: 8px;
   }
 
   .children.slide-down {
-    /* ToDo : Adjust based on your content */
     max-height: 200px;
-    opacity: 1; /* Fully visible */
+    opacity: 1;
   }
 
   .children a {
-    font-size: var(--leftmenu-font-size);
-    padding-left: 26px;
-    position: relative;
-    letter-spacing: 0.2px;
+    font-size: calc(var(--leftmenu-font-size) - 1px);
+    padding: 10px 16px 10px 32px;
+    margin: 2px 0;
   }
 
   .children a.line-child::after {
-    opacity: 1;
+    opacity: 0.4;
     background: url('/public/assets/line.svg');
-    height: 38px;
+    height: 32px;
   }
+
   .children a::before {
     content: "";
     position: absolute;
-    top: 0.8125px;
-    bottom: 0.8125px;
-    left: calc(6.5px * -1);
-    width: 2.4375px;
+    left: 0;
+    width: 2px;
     background-color: transparent;
-    border-top-right-radius: var(--p-border-radius-100);
-    border-bottom-right-radius: var(--p-border-radius-100);
+    border-radius: 4px;
   }
 
   .children a::after,
   .children a::before {
-    content: "";
-    position: absolute;
-    top: -1px;
-    left: 2px;
-    width: 21px;
-    height: 26px;
-    border-radius: 0;
-    opacity: 0;
-    /* background: url("LINE.svg"); */
-    transition: opacity 0.3s;
+    transition: all 0.2s ease;
   }
 
   .children a:hover::before,
@@ -94,20 +85,31 @@
     background: url("/public/assets/arrow.svg");
   }
 
-  .children a::after {
-    content: "";
-    position: absolute;
-    z-index: 1;
-    top: -1px;
-    right: -1px;
-    bottom: -1px;
-    display: block;
-    pointer-events: none;
-    box-shadow: 0 0 0 -1px var(--leftmenu-child-shadow-clr);
-    border-radius: 3.25px;
+  .selected-child {
+    font-weight: var(--leftmenu-selchild-font-weight);
+    background-color: var(--leftmenu-selchild-bg-clr);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
   }
-  .selected-child ~ .line-child::after {
-    display: none;
+
+  .count {
+    background-color: var(--leftmenu-count-bg-clr);
+    color: var(--leftmenu-count-txt-clr);
+    border-radius: 20px;
+    padding: 4px 12px;
+    margin-left: auto;
+    font-size: 12px;
+    font-weight: var(--leftmenu-count-font-weight);
+  }
+
+  .arrow-icon {
+    margin-left: auto;
+    width: 12px;
+    transition: transform 0.2s ease;
+  }
+
+  /* Add this if you want to rotate arrow when menu is open */
+  .arrow-icon.open {
+    transform: rotate(180deg);
   }
 
   .footer {
@@ -120,10 +122,12 @@
   .children {
     animation: slideDown 0.3s ease-in-out;
   }
+
   .selected-child {
     font-weight: var(--leftmenu-selchild-font-weight);
     background-color: var(--leftmenu-selchild-bg-clr);
   }
+
   .count {
     background-color: var(--leftmenu-count-bg-clr);
     color: var(--leftmenu-count-txt-clr);
@@ -132,6 +136,7 @@
     margin-left: auto;
     font-weight: var(--leftmenu-count-font-weight);
   }
+
   .arrow-icon {
     margin-left: auto;
     width: 10px;
@@ -169,7 +174,7 @@
   .menu-toggle-button {
     display: flex;
   }
-  
+
   #left-menu {
     position: fixed;
     top: 56px;
@@ -178,11 +183,11 @@
     transition: left 0.3s ease;
     height: calc(100vh - 56px);
   }
-  
+
   #left-menu.menu-open {
     left: 0;
   }
-  
+
   #left-menu .leftMenus {
     border-radius: 0;
     height: 100%;
@@ -207,7 +212,7 @@
   .menu-toggle-button {
     display: flex;
   }
-  
+
   #left-menu {
     position: fixed;
     top: 56px;
@@ -217,23 +222,25 @@
     height: calc(100vh - 56px);
   }
 
-   #main_page .main_head {
-    padding-left: 50px; /* Space for the toggle button */
+  #main_page .main_head {
+    padding-left: 50px;
+    /* Space for the toggle button */
   }
 
-   .menu-open + .content_section #main_page .main_head {
+  .menu-open+.content_section #main_page .main_head {
     padding-left: 0;
   }
-  
+
   #left-menu.menu-open {
     left: 0;
   }
-  
+
   #left-menu .leftMenus {
     border-radius: 0;
     height: 100%;
   }
 }
+
 @media (max-width: 1024px) {
   #left-menu.menu-open::before {
     content: "";

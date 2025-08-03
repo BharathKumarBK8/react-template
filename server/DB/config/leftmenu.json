@@ -1,252 +1,169 @@
 {
-  "section": [
-    {
-      "id": "main",
-      "menuList": [
-        {
-          "id": "home-page",
-          "label": "Home",
-          "path": "/",
-          "icon": "bi bi-house-door",
-          "isSelected": false,
-          "isPrivate": false,
-          "children": []
-        },
-        {
-          "id": "student-dashboard",
-          "label": "Student Details",
-          "path": "/studentdetails",
-          "icon": "bi bi-person-check",
-          "isSelected": false,
-          "isPrivate": true,
-          "children": [
-            {
-              "id": "student-table",
-              "label": "Student Table",
-              "path": "/studentdetails/studenttable",
-              "icon": "bi bi-table",
-              "isSelected": false,
-              "isPrivate": false
-            },
-            {
-              "id": "student-mark-table",
-              "label": "Student Mark List",
-              "path": "/studentdetails/studentmarklist",
-              "icon": "bi bi-journal-medical",
-              "isSelected": false,
-              "isPrivate": false
-            },
-            {
-              "id": "student-attendance-table",
-              "label": "Student Attendance List",
-              "path": "/studentdetails/studentattendancelist",
-              "icon": "bi bi-journal-check",
-              "isSelected": false,
-              "isPrivate": false
-            }
-          ]
-        },
-        {
-          "id": "teacher-dashboard",
-          "label": "Teacher Details",
-          "path": "/teachersdetails",
-          "icon": "bi bi-people-fill",
-          "isSelected": false,
-          "isPrivate": true,
-          "children": [
-            {
-              "id": "teachers-table",
-              "label": "Teachers Table",
-              "path": "/teachersdetails/teacherstable",
-              "icon": "bi bi-table",
-              "isSelected": false,
-              "isPrivate": false
-            },
-           {
-              "id": "teachers-attendance-table",
-              "label": "Teachers Attendance List",
-              "path": "/teachersdetails/teachersattendancelist",
-              "icon": "bi bi-journal-check",
-              "isSelected": false,
-              "isPrivate": false
-            }
-          ]
-        },
-        
-        {
-          "id": "fees-details",
-          "label": "Fee Structure",
-          "path": "/feestructure",
-          "icon": "bi bi-cash-coin",
-          "isSelected": false,
-          "isPrivate": true,
-          "children": [
-            {
-              "id": "I-term-fees",
-              "label": "I-Term",
-              "path": "/feestructure/first-term",
-              "icon": "bi bi-1-circle-fill",
-              "isSelected": false,
-              "isPrivate": false
-            },
-            {
-              "id": "II-term-fees",
-              "label": "II-Term",
-              "path": "/feestructure/second-term",
-              "icon": "bi bi-2-circle-fill",
-              "isSelected": false,
-              "isPrivate": false
-            },
-            {
-              "id": "III-term-fees",
-              "label": "III-Term ",
-              "path": "/feestructure/third-term",
-              "icon": "bi bi-3-circle-fill",
-              "isSelected": false,
-              "isPrivate": false
-            }
-          ]
-        },
-        {
-          "id": "admission-details",
-          "label": "Admission",
-          "path": "/admission",
-          "icon": "bi bi-card-checklist",
-          "isSelected": false,
-          "isPrivate": true,
-          "children": []
-        },
-        {
-          "id": "contact-details",
-          "label": "Contact",
-          "path": "/contact",
-          "icon": "bi bi-person-lines-fill",
-          "isSelected": false,
-          "isPrivate": false,
-          "children": []
-        },
-        {
-          "id": "academic-details",
-          "label": "Academic",
-          "path": "/academicdetails",
-          "icon": "bi bi-mortarboard-fill",
-          "isSelected": false,
-          "isPrivate": false,
-          "children": [
-            {
-              "id": "uniform-details",
-              "label": "Uniform",
-              "path": "/academicdetails/uniform",
-              "icon": "bi bi-person-standing-dress",
-              "isSelected": false,
-              "isPrivate": false,
-              "children": []
-            },
-            {
-              "id": "sports-details",
-              "label": "Sports",
-              "path": "/academicdetails/sports",
-              "icon": "bi bi-universal-access",
-              "isSelected": false,
-              "isPrivate": false,
-              "children": []
-            },
-            {
-              "id": "extra-curricular-details",
-              "label": "Extra Curricular",
-              "path": "/academicdetails/extra-curricular",
-              "icon": "bi bi-shield-fill-plus",
-              "isSelected": false,
-              "isPrivate": false,
-              "children": []
-            }
-          ]
-        },
-        {
-          "id": "facilities-details",
-          "label": "Facilities",
-          "path": "/facilitiesdetails",
-          "icon": "bi bi-bookmarks-fill",
-          "isSelected": false,
-          "isPrivate": false,
-          "children": [
-            {
-              "id": "transport-details",
-              "label": "Transport",
-              "path": "/facilitiesdetails/transport",
-              "icon": "bi bi-bus-front-fill",
-              "isSelected": false,
-              "isPrivate": false,
-              "children": []
-            },
-            {
-              "id": "library-details",
-              "label": "Library",
-              "path": "/facilitiesdetails/library",
-              "icon": "bi bi-book",
-              "isSelected": false,
-              "isPrivate": false,
-              "children": []
-            },
-            {
-              "id": "lab-details",
-              "label": "Lab Facilities",
-              "path": "/facilitiesdetails/lab-facilities",
-              "icon": "bi bi-droplet-half",
-              "isSelected": false,
-              "isPrivate": false,
-              "children": []
-            }
-          ]
-        },
-        {
-          "id": "students-hub-details",
-          "label": "Student Hub",
-          "path": "/studenthubdetails",
-          "icon": "bi bi-git",
-          "isSelected": false,
-          "isPrivate": false,
-          "children": [
-            {
-              "id": "houses-details",
-              "label": "Houses",
-              "path": "/studenthubdetails/houses",
-              "icon": "bi bi-bank",
-              "isSelected": false,
-              "isPrivate": false,
-              "children": []
-            },
-            {
-              "id": "events-details",
-              "label": "Events",
-              "path": "/studenthubdetails/events",
-              "icon": "bi bi-calendar-event-fill",
-              "isSelected": false,
-              "isPrivate": false,
-              "children": []
-            },
-            {
-              "id": "achievements-details",
-              "label": "Achievements",
-              "path": "/studenthubdetails/achievements",
-              "icon": "bi bi-award-fill",
-              "isSelected": false,
-              "isPrivate": false,
-              "children": []
-            }
-          ]
-        }
-      ]
-    }
-  ],
-  "footerdata": [
-    {
-      "id": "settings",
-      "label": "Settings",
-      "icon": "bi bi-gear",
-      "path": "/settings",
-      "isSelected": false,
-      "isPrivate": true
-    }
-  ]
+    "section": [
+      {
+        "id": "main",
+        "menuList": [
+          {
+            "id": "dashboard",
+            "label": "Dashboard",
+            "icon": "bi bi-house-door",
+            "path": "/",
+            "isSelected": false,
+            "isPrivate": false
+          },
+          {
+            "id": "appointments",
+            "label": "Appointments",
+            "icon": "bi bi-calendar-check",
+            "path": "/appointments",
+            "isSelected": false,
+            "isPrivate": true,
+            "children": [
+              {
+                "id": "schedule",
+                "label": "Schedule Appointment",
+                "icon": "bi bi-calendar-plus",
+                "path": "/appointments/schedule",
+                "isSelected": false
+              },
+              {
+                "id": "calendar",
+                "label": "Calendar View",
+                "icon": "bi bi-calendar",
+                "path": "/appointments/calendar",
+                "isSelected": false
+              }
+            ]
+          },
+          {
+            "id": "patients",
+            "label": "Patients",
+            "icon": "bi bi-people-fill",
+            "path": "/patients",
+            "isSelected": false,
+            "isPrivate": true,
+            "children": [
+              {
+                "id": "patient-records",
+                "label": "Patient Records",
+                "icon": "bi bi-file-earmark-person",
+                "path": "/patients/records",
+                "isSelected": false
+              },
+              {
+                "id": "medical-history",
+                "label": "Medical History",
+                "icon": "bi bi-journal-medical",
+                "path": "/patients/medical-history",
+                "isSelected": false
+              },
+              {
+                "id": "treatment-plans",
+                "label": "Treatment Plans",
+                "icon": "bi bi-file-medical",
+                "path": "/patients/treatment-plans",
+                "isSelected": false
+              }
+            ]
+          },
+          {
+            "id": "treatments",
+            "label": "Treatments",
+            "icon": "bi bi-clipboard2-pulse",
+            "path": "/treatments",
+            "isSelected": false,
+            "isPrivate": true,
+            "children": [
+              {
+                "id": "procedures",
+                "label": "Dental Procedures",
+                "icon": "bi bi-tools",
+                "path": "/treatments/procedures",
+                "isSelected": false
+              },
+              {
+                "id": "xrays",
+                "label": "X-Rays & Images",
+                "icon": "bi bi-camera-reels",
+                "path": "/treatments/xrays",
+                "isSelected": false
+              }
+            ]
+          },
+          {
+            "id": "billing",
+            "label": "Billing",
+            "icon": "bi bi-cash-stack",
+            "path": "/billing",
+            "isSelected": false,
+            "isPrivate": true,
+            "children": [
+              {
+                "id": "invoices",
+                "label": "Invoices",
+                "icon": "bi bi-file-earmark-text",
+                "path": "/billing/invoices",
+                "isSelected": false
+              },
+              {
+                "id": "insurance",
+                "label": "Insurance Claims",
+                "icon": "bi bi-shield-check",
+                "path": "/billing/insurance",
+                "isSelected": false
+              },
+              {
+                "id": "payments",
+                "label": "Payment History",
+                "icon": "bi bi-clock-history",
+                "path": "/billing/payments",
+                "isSelected": false
+              }
+            ]
+          },
+          {
+            "id": "inventory",
+            "label": "Inventory",
+            "icon": "bi bi-box-seam",
+            "path": "/inventory",
+            "isSelected": false,
+            "isPrivate": true,
+            "children": [
+              {
+                "id": "supplies",
+                "label": "Dental Supplies",
+                "icon": "bi bi-bag-check",
+                "path": "/inventory/supplies",
+                "isSelected": false
+              },
+              {
+                "id": "equipment",
+                "label": "Equipment",
+                "icon": "bi bi-tools",
+                "path": "/inventory/equipment",
+                "isSelected": false
+              }
+            ]
+          },
+          {
+            "id": "reports",
+            "label": "Reports",
+            "icon": "bi bi-graph-up",
+            "path": "/reports",
+            "isSelected": false,
+            "isPrivate": true
+          }
+        ]
+      }
+    ],
+    "footerdata": [
+      {
+        "id": "settings",
+        "label": "Settings",
+        "icon": "bi bi-gear",
+        "path": "/settings",
+        "isSelected": false,
+        "isPrivate": true
+      }
+    ] 
 }

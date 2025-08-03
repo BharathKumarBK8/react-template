@@ -1,0 +1,147 @@
+{
+  "buttons": [
+    {
+      "id": "navigate",
+      "type": "button",
+      "text": "Add",
+      "theme": "btn_black",
+      "path": "/patients/records/add"
+    }
+  ],
+  "title": "Patient Records",
+  "rowLayouts": [
+    {
+      "columns": [
+        {
+          
+          "size": {
+            "xl": 12,
+            "lg": 12,
+            "md": 12,
+            "sm": 12
+          },
+          "elements": [
+            {
+              "type": "table",
+              "content": {
+                "options": {
+                  "title": {
+                    "text": "Sample Table"
+                  },
+                  "columns": [
+                    {
+                      "type": "text",
+                      "label": "Patient Name",
+                      "name": "PatientName",
+                      "showSort": true,
+                      "showFilter": true,
+                      "filter": {
+                        "showMenu": true,
+                        "showDropdown": false,
+                        "dropdownData": []
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "label": "Age",
+                      "name": "Age",
+                      "showSort": true,
+                      "showFilter": true,
+                      "filter": {
+                        "showMenu": true,
+                        "showDropdown": false,
+                        "dropdownData": []
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "label": "Gender",
+                      "name": "Gender",
+                      "showSort": true,
+                      "showFilter": true,
+                      "filter": {
+                        "showMenu": true,
+                        "showDropdown": false,
+                        "dropdownData": []
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "label": "Contact Number",
+                      "name": "ContactNumber",
+                      "showSort": true,
+                      "showFilter": true,
+                      "filter": {
+                        "showMenu": true,
+                        "showDropdown": false,
+                        "dropdownData": []
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "label": "Last Visit",
+                      "name": "LastVisit",
+                      "showSort": true,
+                      "showFilter": true,
+                      "filter": {
+                        "showMenu": true,
+                        "showDropdown": false,
+                        "dropdownData": []
+                      }
+                    }
+                  ],
+                  "style": {
+                    "table": {
+                      "width": "50px",
+                      "fontFamily": "Inter, serif",
+                      "background": "",
+                      "marginLeft": "10px",
+                      "marginRight": "10px"
+                    },
+                    "searchInput": {
+                      "padding": "0.5rem",
+                      "borderRadius": "4px",
+                      "border": "1px solid #000",
+                      "width": "150px",
+                      "backgroundColor": "#ffffff"
+                    },
+                    "dropdown": {
+                      "width": "200px"
+                    },
+                    "bodyCell": {
+                      "padding": "12px 16px",
+                      "fontSize": "14px",
+                      "color": "black",
+                      "border": "1px solid #000",
+                      "backgroundColor": "#c4fff9",
+                      "width": ""
+                    },
+                    "actions": {
+                      "show": true,
+                      "header": "Actions",
+                      "buttons": [
+                        "edit",
+                        "delete"
+                      ]
+                    }
+                  },
+                  "actions": {
+                    "show": true,
+                    "header": "Actions",
+                    "buttons": [
+                      "edit",
+                      "delete"
+                    ]
+                  }
+                },
+                "data": {
+                  "url": "patientrecords-data"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

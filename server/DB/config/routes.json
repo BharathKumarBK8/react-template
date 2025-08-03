@@ -1,5 +1,25 @@
 [
   {
+    "path":"/patients/records",
+    "configPath":"patientrecordslist",
+    "isPrivate":true
+  },
+  {
+    "path":"/patients/records/add",
+    "configPath":"patientrecordsform",
+    "isPrivate":true
+  },
+  {
+    "path":"/patients/records/:id/edit",
+    "configPath":"patientrecordsform",
+    "isPrivate":true
+  },
+  {
+    "path":"/patients/records/:id/delete",
+    "configPath":"patientrecordslist",
+    "isPrivate":true
+  },
+  {
     "path": "/apps/testApp",
     "configPath": "/TestApp/bundle.js",
     "externalApp": {
