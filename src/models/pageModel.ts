@@ -7,7 +7,7 @@ import { RADIO_BUTTON_DATA } from "../common/components/Formcontrols/Radiobutton
 import { CHECK_BOX_DATA } from "../common/components/Formcontrols/CheckBox";
 import { BUTTON_DATA } from "../common/components/Formcontrols/Buttons";
 import { DATE_TIME_DATA } from "../common/components/Formcontrols/Datetime";
-
+import { IMAGE_UPLOAD_DATA } from "../common/components/Formcontrols/ImageUpload";
 import { IMAGE_DATA } from "../common/components/Image";
 
 export interface PageModel {
@@ -83,7 +83,8 @@ export interface COLUMNS {
     | CHECK_BOX_DATA
     | BUTTON_DATA
     | DATE_TIME_DATA
-    | IMAGE_DATA;
+    | IMAGE_DATA
+    | IMAGE_UPLOAD_DATA;
 }
 
 export enum DATA_DISPLAY_TYPE {
@@ -102,10 +103,11 @@ export enum DATA_DISPLAY_TYPE {
   BUTTON_DATA = "buttons",
   DATE_TIME_DATA = "datetime",
   IMAGE = "image",
+  IMAGE_UPLOAD = "imageupload",
 }
 
 export interface FORM_DATA {
-  fields: Array<{
+  fields: Array<{ 
     type: string;
     content: any;
     size: {

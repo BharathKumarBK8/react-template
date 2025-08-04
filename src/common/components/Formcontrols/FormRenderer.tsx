@@ -11,6 +11,7 @@ import DropDown, { FORM_DROPDOWN_DATA } from "./DropDown";
 import Radiobutton, { RADIO_BUTTON_DATA } from "./Radiobutton";
 import CheckBox, { CHECK_BOX_DATA } from "./CheckBox";
 import Buttons, { BUTTON_DATA } from "./Buttons";
+import ImageUpload, { IMAGE_UPLOAD_DATA } from "./ImageUpload";
 import { FORM_DATA } from "../../../models/pageModel";
 import { postData, updateData, getData } from "../../../api/dataAPI";
 import Loader from "../../components/Loader";
@@ -277,6 +278,15 @@ const FormRenderer = forwardRef<ComponentRendererRef, FORM_DATA>(
               {field.type === "datetime" && field.content && (
                 <DateTime
                   data={field.content as DATE_TIME_DATA}
+                  ref={(el) =>
+                    field.content?.name &&
+                    (fieldRefs.current[field.content.name] = el)
+                  }
+                />
+              )}
+              {field.type === "imageupload" && field.content && (
+                <ImageUpload
+                  data={field.content as IMAGE_UPLOAD_DATA}
                   ref={(el) =>
                     field.content?.name &&
                     (fieldRefs.current[field.content.name] = el)

@@ -191,6 +191,25 @@
                       "md": 12,
                       "sm": 12
                     }
+                  },
+                  {
+                    "type":"imageupload",
+                    "content": {
+                      "name": "MedicalReport",
+                      "title": {
+                        "text": "Upload Medical Report"
+                      },
+                      "placeholder": "Drag and drop or click to upload",
+                      "validation": {
+                        "required": true
+                      },
+                      "onError": {
+                        "position": "below",
+                        "message": {
+                          "required": "Medical Report is required"
+                        }
+                      }
+                    }
                   }
                 ]
               }
