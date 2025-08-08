@@ -79,8 +79,8 @@
                     },
                     {
                       "type": "text",
-                      "label": "Last Visit",
-                      "name": "LastVisit",
+                      "label": "Date of Birth",
+                      "name": "DateOfBirth",
                       "showSort": true,
                       "showFilter": true,
                       "filter": {
@@ -129,6 +129,7 @@
                     "show": true,
                     "header": "Actions",
                     "buttons": [
+                      "view",
                       "edit",
                       "delete"
                     ]

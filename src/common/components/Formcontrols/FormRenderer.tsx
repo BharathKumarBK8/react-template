@@ -6,6 +6,8 @@ import React, {
   useRef,
 } from "react";
 import { useLocation } from "react-router-dom";
+import Table from "../Table/Table";
+import { TABLE_DATA } from "../Table/Model";
 import TextBox, { TEXTBOX_DATA } from "./TextBox";
 import DropDown, { FORM_DROPDOWN_DATA } from "./DropDown";
 import Radiobutton, { RADIO_BUTTON_DATA } from "./Radiobutton";
@@ -48,6 +50,9 @@ const FormRenderer = forwardRef<ComponentRendererRef, FORM_DATA>(
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState<string | null>(null);
     const [isEditMode, setIsEditMode] = useState(false);
+    const [isViewMode, setIsViewMode] = useState(false);
+
+
 
     const { rowData } = location.state || {};
 
@@ -193,8 +198,10 @@ const FormRenderer = forwardRef<ComponentRendererRef, FORM_DATA>(
     }, []);
 
     useEffect(() => {
-      setIsEditMode(location.pathname.includes("edit"));
-    }, [location.pathname]);
+       setIsEditMode(location.pathname.includes("edit"));
+       setIsViewMode(location.pathname.includes("view"));
+      }, [location.pathname]);
+
 
     useEffect(() => {
       if (rowData) {
@@ -240,7 +247,9 @@ const FormRenderer = forwardRef<ComponentRendererRef, FORM_DATA>(
             >
               {field.type === "textbox" && field.content && (
                 <TextBox
-                  data={field.content as TEXTBOX_DATA}
+                  data={{...(field.content as TEXTBOX_DATA),
+                    disabled: isViewMode
+                  }}
                   ref={(el) =>
                     field.content?.name &&
                     (fieldRefs.current[field.content.name] = el)
@@ -249,16 +258,23 @@ const FormRenderer = forwardRef<ComponentRendererRef, FORM_DATA>(
               )}
               {field.type === "dropdown" && field.content && (
                 <DropDown
-                  data={field.content as FORM_DROPDOWN_DATA}
+                  data={{...(field.content as FORM_DROPDOWN_DATA),
+                    disabled: isViewMode
+                  }}
                   ref={(el) =>
                     field.content?.name &&
                     (fieldRefs.current[field.content.name] = el)
                   }
                 />
               )}
+              {field.type === "table" && field.content && (
+                <Table {...(field.content as TABLE_DATA)} />
+              )}
               {field.type === "radiobutton" && field.content && (
                 <Radiobutton
-                  data={field.content as RADIO_BUTTON_DATA}
+                  data={{...(field.content as RADIO_BUTTON_DATA),
+                    disabled: isViewMode
+                  }}
                   ref={(el) =>
                     field.content?.name &&
                     (fieldRefs.current[field.content.name] = el)
@@ -268,7 +284,9 @@ const FormRenderer = forwardRef<ComponentRendererRef, FORM_DATA>(
               {field.type === "checkbox" && field.content && (
                 <CheckBox
                   {...(field.content as CHECK_BOX_DATA)}
-                  data={field.content as CHECK_BOX_DATA}
+                  data={{...(field.content as CHECK_BOX_DATA),
+                    disabled: isViewMode
+                  }}
                   ref={(el) =>
                     field.content?.name &&
                     (fieldRefs.current[field.content.name] = el)
@@ -277,7 +295,9 @@ const FormRenderer = forwardRef<ComponentRendererRef, FORM_DATA>(
               )}
               {field.type === "datetime" && field.content && (
                 <DateTime
-                  data={field.content as DATE_TIME_DATA}
+                  data={{...(field.content as DATE_TIME_DATA),
+                    disabled: isViewMode
+                  }}
                   ref={(el) =>
                     field.content?.name &&
                     (fieldRefs.current[field.content.name] = el)
@@ -286,7 +306,9 @@ const FormRenderer = forwardRef<ComponentRendererRef, FORM_DATA>(
               )}
               {field.type === "imageupload" && field.content && (
                 <ImageUpload
-                  data={field.content as IMAGE_UPLOAD_DATA}
+                  data={{...(field.content as IMAGE_UPLOAD_DATA),
+                    disabled: isViewMode
+                  }}
                   ref={(el) =>
                     field.content?.name &&
                     (fieldRefs.current[field.content.name] = el)

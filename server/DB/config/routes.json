@@ -15,6 +15,11 @@
     "isPrivate":true
   },
   {
+    "path":"/patients/records/:id/view",
+    "configPath":"patientrecordsform",
+    "isPrivate":true
+  },
+  {
     "path":"/patients/records/:id/delete",
     "configPath":"patientrecordslist",
     "isPrivate":true

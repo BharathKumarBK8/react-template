@@ -1,9 +1,10 @@
 {
-  "buttons": [
+ "buttons": [
     {
       "id": "form_clear",
       "type": "button",
       "text": "Clear",
+      "modes": ["add", "edit"],
       "style": {
         "backgroundColor": "#6c757d",
         "textColor": "#fff",
@@ -13,9 +14,24 @@
       }
     },
     {
+      "id": "form_cancel",
+      "type": "button",
+      "text": "Cancel",
+      "modes": ["add", "edit", "view"],
+      "style": {  
+        "backgroundColor": "#dc3545",
+        "textColor": "#fff",
+        "borderColor": "#dc3545",
+        "boxShadow": "none",
+        "gradient": "none"
+      },
+      "path": "/patients/records"
+    },
+    {
       "id": "form_save",
       "type": "button",
       "text": "Save",
+      "modes": ["add", "edit"],
       "style": {
         "backgroundColor": "#000",
         "textColor": "#fff",
@@ -24,6 +40,19 @@
         "gradient": "none"
       },
       "path": "/patients/records"
+    },
+    {
+      "id": "form_print",
+      "type": "button",
+      "text": "Print",
+      "modes": ["view"],
+      "style": {
+        "backgroundColor": "#007bff",
+        "textColor": "#fff",
+        "borderColor": "#007bff",
+        "boxShadow": "none",
+        "gradient": "none"
+      }
     }
   ],
   "title": "Patient Record Details",
@@ -79,6 +108,59 @@
                       "sm": 12
                     }
                   },
+                                    {
+                    "type": "dropdown",
+                    "size": {
+                      "xl": 6,
+                      "lg": 6,
+                      "md": 12,
+                      "sm": 12
+                    },
+                    "content": {
+                      "position": "horizontal",
+                      "name": "Gender",
+                      "value": "",
+                      "title": {
+                        "text": "Gender"
+                      },
+                      "options": [
+                        { "value": "Male", "label": "Male" },
+                        { "value": "Female", "label": "Female" },
+                        { "value": "Other", "label": "Other" }
+                      ],
+                      "validation": {
+                        "required": true
+                      }
+                    }
+                  },
+                  {
+                    "type": "textbox",
+                    "content": {
+                      "name": "DateOfBirth",
+                      "inputType": "date",
+                      "placeholder": "Select date of birth",
+                      "position": "horizontal",
+                      "value": "",
+                      "title": {
+                        "text": "Date of Birth"
+                      },
+                      "validation": {
+                        "required": true
+                      },
+                      "onError": {
+                        "position": "below",
+                        "message": {
+                          "required": "Date of Birth is required"
+                        }
+                      }
+                    },
+                    "size": {
+                      "xl": 6,
+                      "lg": 6,
+                      "md": 12,
+                      "sm": 12
+                    }
+                  },
                   {
                     "type": "textbox",
                     "content": {
@@ -109,31 +191,7 @@
                       "sm": 12
                     }
                   },
-                  {
-                    "type": "dropdown",
-                    "size": {
-                      "xl": 6,
-                      "lg": 6,
-                      "md": 12,
-                      "sm": 12
-                    },
-                    "content": {
-                      "position": "horizontal",
-                      "name": "Gender",
-                      "value": "",
-                      "title": {
-                        "text": "Gender"
-                      },
-                      "options": [
-                        { "value": "Male", "label": "Male" },
-                        { "value": "Female", "label": "Female" },
-                        { "value": "Other", "label": "Other" }
-                      ],
-                      "validation": {
-                        "required": true
-                      }
-                    }
-                  },
+
                   {
                     "type": "textbox",
                     "content": {
@@ -163,57 +221,98 @@
                       "md": 12,
                       "sm": 12
                     }
-                  },
-                  {
-                    "type": "textbox",
-                    "content": {
-                      "name": "LastVisit",
-                      "inputType": "date",
-                      "placeholder": "Select last visit date",
-                      "position": "horizontal",
-                      "value": "",
-                      "title": {
-                        "text": "Last Visit"
-                      },
-                      "validation": {
-                        "required": true
-                      },
-                      "onError": {
-                        "position": "below",
-                        "message": {
-                          "required": "Last Visit is required"
-                        }
-                      }
-                    },
-                    "size": {
-                      "xl": 6,
-                      "lg": 6,
-                      "md": 12,
-                      "sm": 12
-                    }
-                  },
-                  {
-                    "type":"imageupload",
-                    "content": {
-                      "name": "MedicalReport",
-                      "title": {
-                        "text": "Upload Medical Report"
-                      },
-                      "placeholder": "Drag and drop or click to upload",
-                      "validation": {
-                        "required": true
-                      },
-                      "onError": {
-                        "position": "below",
-                        "message": {
-                          "required": "Medical Report is required"
-                        }
-                      }
-                    }
                   }
                 ]
               }
             }
+          ]
+        }
+      ]
+    },
+        {
+      "columns": [
+        {
+          
+          "size": {
+            "xl": 12,
+            "lg": 12,
+            "md": 12,
+            "sm": 12
+          },
+          "elements": [
+            {
+  "type": "table",
+  "content": {
+    "options": {
+      "title": {
+        "text": "Treatment History"
+      },
+      "columns": [
+        {
+          "type": "datetime",
+          "label": "Treatment Date",
+          "name": "treatmentDate",
+          "showSort": true,
+          "showFilter": true,
+          "filter": {
+            "showMenu": true,
+            "showDropdown": false,
+            "dropdownData": []
+          }
+        },
+        {
+          "type": "text",
+          "label": "Treatment Type",
+          "name": "treatmentType",
+          "showSort": true,
+          "showFilter": true,
+          "filter": {
+            "showMenu": true,
+            "showDropdown": false,
+            "dropdownData": []
+          }
+        },
+        {
+          "type": "text",
+          "label": "Doctor",
+          "name": "doctor",
+          "showSort": true,
+          "showFilter": true,
+          "filter": {
+            "showMenu": true,
+            "showDropdown": false,
+            "dropdownData": []
+          }
+        },
+        {
+          "type": "text",
+          "label": "Notes",
+          "name": "notes",
+          "showSort": true,
+          "showFilter": true,
+          "filter": {
+            "showMenu": true,
+            "showDropdown": false,
+            "dropdownData": []
+          }
+        }
+      ],
+      "actions": {
+        "show": true,
+        "header": "Actions",
+        "buttons": [
+          "view",
+          "edit",
+          "delete"
+        ]
+      }
+    },
+    "data": {
+      "url": "patient-treatments-data"
+    }
+  }
+}
+
           ]
         }
       ]

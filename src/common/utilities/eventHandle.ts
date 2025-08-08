@@ -11,6 +11,7 @@ import { getData } from "../../api/dataAPI";
 export enum EVENT_TYPE {
   FORM_SAVE = "form_save",
   FORM_CLEAR = "form_clear",
+  FORM_CANCEL = "form_cancel",
   NAVIGATE = "navigate",
 }
 
@@ -108,6 +109,13 @@ const handleEvents = async (
       }
       if (item.id === EVENT_TYPE.FORM_CLEAR) {
         compRef.clearForm();
+        return true;
+      }
+      if (item.id === EVENT_TYPE.FORM_CANCEL) {
+        compRef.clearForm();
+        if (item.path) {
+          navigate(item.path);
+        }
         return true;
       }
     }

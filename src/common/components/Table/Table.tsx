@@ -274,6 +274,21 @@ function Table(props: TABLE_DATA) {
     );
   };
 
+  const onView = (rowData: TABLE_RESPONSE_MODEL) => {
+  try {
+    navigate(`${location.pathname}/${rowData.id}/view`, {
+      state: { rowData, returnUrl: location.pathname, id: rowData.id },
+    });
+  } catch (error) {
+    showToast(
+      TOAST_SUMMARIES.ERROR,
+      ERROR_MESSAGES.NAVIGATION_FAILD,
+      ToastSeverity.ERROR
+    );
+  }
+};
+
+
   const onEdit = (rowData: TABLE_RESPONSE_MODEL) => {
     try {
       console.log("Edit clicked for row:", rowData);
@@ -321,6 +336,13 @@ function Table(props: TABLE_DATA) {
 
     return (
       <div className="action-buttons">
+                {actions.buttons.includes("view") && (
+          <Button
+          label="View"
+          className="view-action"
+          onClick={() => onView(rowData)}
+          />
+        )}
         {actions.buttons.includes("edit") && (
           <Button
             label="Edit"

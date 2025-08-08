@@ -46,7 +46,7 @@ export interface TABLE_DATA {
     };
     actions?: {
       header?: string;
-      buttons?: Array<"edit" | "delete">;
+      buttons?: Array<"edit" | "delete" | "view">;
     };
   };
   data?: {

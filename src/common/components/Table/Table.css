@@ -58,12 +58,14 @@
 .table-body {
   padding: 0px;
 }
+
 /* PrimeReact DataTable Customization */
 .p-datatable {
   font-family: "Inter", serif;
-  
+
 }
-.p-datatable-header{
+
+.p-datatable-header {
   border-radius: 12px 12px 0px 0px;
   background-color: white;
   border-width: 1px 0px 0px 0px;
@@ -72,36 +74,36 @@
 .p-datatable .p-datatable-wrapper {
   border: none !important;
   overflow-x: auto;
-  
+
 }
 
-.p-datatable .p-datatable-thead > tr > th {
+.p-datatable .p-datatable-thead>tr>th {
   background: var(--thead-bg);
-  color: var(--th-color) ;
-  padding: 12px 16px ;
+  color: var(--th-color);
+  padding: 12px 16px;
   text-align: left;
-  font-weight: 600 ;
-  font-size: 14px ;
+  font-weight: 600;
+  font-size: 14px;
   transition: all 0.2s ease;
-  width:170px;
+  width: 170px;
 }
 
-.p-datatable .p-datatable-tbody > tr > td {
-  padding: 12px 16px ;
-  font-size: 14px ;
-  color: var(--td-color) ;
+.p-datatable .p-datatable-tbody>tr>td {
+  padding: 12px 16px;
+  font-size: 14px;
+  color: var(--td-color);
   border-bottom: 1px solid var(--td-border-color);
 }
 
-.p-datatable .p-datatable-tbody > tr:hover {
+.p-datatable .p-datatable-tbody>tr:hover {
   background-color: var(--tr-hover-bg);
   cursor: pointer;
-} 
+}
 
-.p-column-filter-menu-button{
-      border-radius: 6px;
-    margin-left: 6px;
-    background: lightgrey;
+.p-column-filter-menu-button {
+  border-radius: 6px;
+  margin-left: 6px;
+  background: lightgrey;
 }
 
 /* Sort Icon Styles */
@@ -196,6 +198,7 @@
   color: rgb(59, 130, 246);
   border: 1px solid rgba(59, 130, 246, 0.2);
 }
+
 .column-filter.p-dropdown {
   width: 200px;
 }
@@ -212,10 +215,12 @@
 .p-dropdown .p-dropdown-clear-icon {
   right: 2.5rem;
 }
-.p-column-filter-row-items{
+
+.p-column-filter-row-items {
   padding-left: 0;
   margin-bottom: 0;
 }
+
 .array-cell {
   display: flex;
   flex-wrap: wrap;
@@ -235,10 +240,11 @@
     overflow-x: auto;
   }
 
-  .p-datatable .p-datatable-thead > tr > th,
-  .p-datatable .p-datatable-tbody > tr > td {
+  .p-datatable .p-datatable-thead>tr>th,
+  .p-datatable .p-datatable-tbody>tr>td {
     padding: 8px 12px !important;
   }
+
   .status-tag {
     padding: 3px 8px;
     font-size: 11px;
@@ -260,6 +266,7 @@
   font-size: 12px;
   font-weight: 600;
 }
+
 .action-buttons {
   display: flex;
   gap: 0.5rem;
@@ -274,8 +281,9 @@
   width: 2rem;
   height: 2rem;
 }
-.action-buttons .edit-action{  
-  background-color:#ddd ;
+
+.action-buttons .view-action {
+  background-color: #f0f0f0;
   width: 60px;
   font-size: 12px;
   box-shadow: 0rem -.0625rem 0rem 0rem #b5b5b5 inset, 0rem 0rem 0rem .0625rem rgba(0, 0, 0, .1) inset, 0rem .03125rem 0rem .09375rem #FFF inset;
@@ -283,11 +291,22 @@
   border-radius: .5rem;
   color: #303030;
 }
-.action-buttons .delete-action{
+
+.action-buttons .edit-action {
+  background-color: #ddd;
+  width: 60px;
+  font-size: 12px;
+  box-shadow: 0rem -.0625rem 0rem 0rem #b5b5b5 inset, 0rem 0rem 0rem .0625rem rgba(0, 0, 0, .1) inset, 0rem .03125rem 0rem .09375rem #FFF inset;
+  border-color: transparent;
+  border-radius: .5rem;
+  color: #303030;
+}
+
+.action-buttons .delete-action {
   background-color: white;
   width: 60px;
-  border-color:transparent;
-  font-size: 12px;  
+  border-color: transparent;
+  font-size: 12px;
   border-radius: .5rem;
   box-shadow: 0rem -.0625rem 0rem 0rem #b5b5b5 inset, 0rem 0rem 0rem .0625rem rgba(0, 0, 0, .1) inset, 0rem .03125rem 0rem .09375rem #FFF inset;
   color: rgba(142, 11, 33, 1);

@@ -45,6 +45,7 @@ export interface BUTTON_MODEL {
   style: BUTTON_STYLE;
   data?: DROPDOWN_DATA[];
   path?: string;
+  modes?: string[];
   onClick?: () => void;
 }
 

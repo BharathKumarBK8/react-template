@@ -40,6 +40,16 @@ function PageRenderer(config: PageModel) {
   const location = useLocation();
   const isHomePage = location.pathname === "/" || location.pathname === "";
 
+  const currentMode = location.pathname.includes('/view') ? 'view' 
+  : location.pathname.includes('/edit') ? 'edit' 
+  : location.pathname.includes('/add') ? 'add' 
+  : 'list';
+
+const filteredButtons = config?.buttons?.filter(button => 
+  !button.modes || button.modes.includes(currentMode)
+) || [];
+
+
   const getTableDataUrl = () => {
     const allColumns: COLUMNS[] = [];
 
@@ -151,7 +161,7 @@ function PageRenderer(config: PageModel) {
           {config?.title}
         </div>
         <div className="btn_group">
-          {config?.buttons?.map((item, index) => (
+          {filteredButtons?.map((item, index) => (
             <button
               key={index}
               className="btn"

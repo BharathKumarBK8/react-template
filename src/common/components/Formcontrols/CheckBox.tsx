@@ -23,6 +23,7 @@ export interface CHECK_BOX_DATA {
   position?: PositionType;
   validation?: Partial<typeof ValidationType>;
   error?: ErrorModel;
+  disabled?: boolean;
   onChange: (value: any) => void;
 }
 
@@ -186,6 +187,7 @@ const CheckBox = forwardRef<FormFieldRef, CheckboxProps>(({ data }, ref) => {
                     (item: { key: string }) =>
                       _.get(item, "key") === _.get(category, "key")
                   )}
+                  disabled={_.get(category, "disabled")}
                   className={error ? "is-invalid" : ""}
                 />
                 <label htmlFor={_.get(category, "key")} className="ms-2">
