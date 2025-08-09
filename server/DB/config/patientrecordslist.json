@@ -6,7 +6,14 @@
       "text": "Add",
       "theme": "btn_black",
       "path": "/patients/records/add"
+    },
+    {
+      "id":"export",
+      "type": "button",
+      "text": "Export",
+      "theme": "btn_black"
     }
+
   ],
   "title": "Patient Records",
   "rowLayouts": [
@@ -23,10 +30,11 @@
           "elements": [
             {
               "type": "table",
+              "name": "patient-records-table",
               "content": {
                 "options": {
                   "title": {
-                    "text": "Sample Table"
+                    "text": "Patient Records"
                   },
                   "columns": [
                     {

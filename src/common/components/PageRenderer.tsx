@@ -27,6 +27,7 @@ import Image, { IMAGE_DATA } from "../components/Image";
 export interface ComponentRendererRef {
   submitForm: () => Promise<boolean>;
   clearForm: () => void;
+  exportToExcel: () => void;
 }
 
 export interface ComponentRefsMap {
@@ -98,7 +99,14 @@ const filteredButtons = config?.buttons?.filter(button =>
       case DATA_DISPLAY_TYPE.CARD:
         return <Card {...(item.content as CARD_DATA)} />;
       case DATA_DISPLAY_TYPE.TABLE:
-        return <Table {...(item.content as TABLE_DATA)} />;
+        return (
+                <Table 
+                ref={(el) => {
+                if (item.name) compRefs.current[item.name] = el;
+                    }}
+                {...(item.content as TABLE_DATA)} 
+                />
+                );
       case DATA_DISPLAY_TYPE.PIE:
         return <Pie {...(item.content as PIE_DATA)} />;
       case DATA_DISPLAY_TYPE.IMAGE:

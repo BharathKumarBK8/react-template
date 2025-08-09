@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, forwardRef, useImperativeHandle } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import {
   TABLE_DATA,
@@ -36,7 +36,7 @@ interface TableFilters {
   [key: string]: FilterElement;
 }
 
-function Table(props: TABLE_DATA) {
+const Table = forwardRef<any, TABLE_DATA>((props, ref) => {
   const toastRef = useRef<ToastRef>(null);
   const navigate = useNavigate();
   const location = useLocation();
@@ -54,6 +54,32 @@ function Table(props: TABLE_DATA) {
   ) => {
     toastRef.current?.show(title, detail, severity);
   };
+
+const exportToExcel = () => {
+  if (!tableData.length || !props.options?.columns) return;
+  
+  const headers = props.options.columns.map(col => col.label).join(",");
+  const rows = tableData.map(row => 
+    props.options!.columns!.map(col => row[col.name] || "").join(",")
+  ).join("\n");
+  
+  const csvContent = "data:text/csv;charset=utf-8," + headers + "\n" + rows;
+  
+  // Use table title or a default name
+  const filename = props.options?.title?.text 
+    ? `${props.options.title.text.replace(/\s+/g, '-')}.csv`
+    : "table-export.csv";
+  
+  const link = document.createElement("a");
+  link.setAttribute("href", encodeURI(csvContent));
+  link.setAttribute("download", filename);
+  link.click();
+};
+
+
+  useImperativeHandle(ref, () => ({
+    exportToExcel
+  }));
 
   useEffect(() => {
     if (props.data?.url) {
@@ -212,6 +238,7 @@ function Table(props: TABLE_DATA) {
     }
     return undefined; // Use default PrimeReact filtering for other column types
   };
+  
   const hasFilterableColumns = () => {
     if (!props.options?.columns) return false;
     return props.options.columns.some(
@@ -256,6 +283,7 @@ function Table(props: TABLE_DATA) {
     ...TABLE_DEFAULT_STYLES.bodyCell,
     ...(props.options?.style?.bodyCell || {}),
   };
+  
   const renderSearch = () => {
     return (
       <div className="table-header">
@@ -275,19 +303,18 @@ function Table(props: TABLE_DATA) {
   };
 
   const onView = (rowData: TABLE_RESPONSE_MODEL) => {
-  try {
-    navigate(`${location.pathname}/${rowData.id}/view`, {
-      state: { rowData, returnUrl: location.pathname, id: rowData.id },
-    });
-  } catch (error) {
-    showToast(
-      TOAST_SUMMARIES.ERROR,
-      ERROR_MESSAGES.NAVIGATION_FAILD,
-      ToastSeverity.ERROR
-    );
-  }
-};
-
+    try {
+      navigate(`${location.pathname}/${rowData.id}/view`, {
+        state: { rowData, returnUrl: location.pathname, id: rowData.id },
+      });
+    } catch (error) {
+      showToast(
+        TOAST_SUMMARIES.ERROR,
+        ERROR_MESSAGES.NAVIGATION_FAILD,
+        ToastSeverity.ERROR
+      );
+    }
+  };
 
   const onEdit = (rowData: TABLE_RESPONSE_MODEL) => {
     try {
@@ -336,11 +363,11 @@ function Table(props: TABLE_DATA) {
 
     return (
       <div className="action-buttons">
-                {actions.buttons.includes("view") && (
+        {actions.buttons.includes("view") && (
           <Button
-          label="View"
-          className="view-action"
-          onClick={() => onView(rowData)}
+            label="View"
+            className="view-action"
+            onClick={() => onView(rowData)}
           />
         )}
         {actions.buttons.includes("edit") && (
@@ -420,6 +447,6 @@ function Table(props: TABLE_DATA) {
       </div>
     </>
   );
-}
+});
 
 export default Table;

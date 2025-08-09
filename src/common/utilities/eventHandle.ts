@@ -13,6 +13,7 @@ export enum EVENT_TYPE {
   FORM_CLEAR = "form_clear",
   FORM_CANCEL = "form_cancel",
   NAVIGATE = "navigate",
+  EXPORT = "export"
 }
 
 const getPushConfigData = async () => {
@@ -123,7 +124,19 @@ const handleEvents = async (
   if (item.id === EVENT_TYPE.NAVIGATE && item.path) {
     navigate(item.path);
     return true;
+  }if (item.id === EVENT_TYPE.EXPORT) { {
+  for (const Key of Object.keys(compRefs.current)) {
+    const compRef = compRefs.current[Key];
+    if (compRef?.exportToExcel) {
+      compRef.exportToExcel();
+      return true;
+    }
   }
+}
+  }
+
+
+
   if (item.id === "pushconfig") {
     try {
       const configData = await getPushConfigData();
