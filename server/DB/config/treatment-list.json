@@ -1,0 +1,115 @@
+{
+  "buttons": [
+    {
+      "id": "navigate",
+      "type": "button",
+      "text": "Add Treatment",
+      "theme": "btn_black",
+      "path": "/treatments/add"
+    },
+    {
+      "id": "export",
+      "type": "button",
+      "text": "Export",
+      "theme": "btn_black"
+    }
+  ],
+  "title": "Treatment Records",
+  "rowLayouts": [
+    {
+      "columns": [
+        {
+          "size": {
+            "xl": 12,
+            "lg": 12,
+            "md": 12,
+            "sm": 12
+          },
+          "elements": [
+            {
+              "type": "table",
+              "name": "treatment-records-table",
+              "content": {
+                "options": {
+                  "title": {
+                    "text": "Treatment Records"
+                  },
+                  "columns": [
+                    {
+                      "type": "text",
+                      "label": "Patient ID",
+                      "name": "patientId",
+                      "showSort": true,
+                      "showFilter": true,
+                      "filter": {
+                        "showMenu": true,
+                        "showDropdown": false,
+                        "dropdownData": []
+                      }
+                    },
+                    {
+                      "type": "datetime",
+                      "label": "Treatment Date",
+                      "name": "treatmentDate",
+                      "showSort": true,
+                      "showFilter": true,
+                      "filter": {
+                        "showMenu": true,
+                        "showDropdown": false,
+                        "dropdownData": []
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "label": "Treatment Type",
+                      "name": "treatmentType",
+                      "showSort": true,
+                      "showFilter": true,
+                      "filter": {
+                        "showMenu": true,
+                        "showDropdown": false,
+                        "dropdownData": []
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "label": "Doctor",
+                      "name": "doctor",
+                      "showSort": true,
+                      "showFilter": true,
+                      "filter": {
+                        "showMenu": true,
+                        "showDropdown": false,
+                        "dropdownData": []
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "label": "Notes",
+                      "name": "notes",
+                      "showSort": true,
+                      "showFilter": true,
+                      "filter": {
+                        "showMenu": true,
+                        "showDropdown": false,
+                        "dropdownData": []
+                      }
+                    }
+                  ],
+                  "actions": {
+                    "show": true,
+                    "header": "Actions",
+                    "buttons": ["view"]
+                  }
+                },
+                "data": {
+                  "url": "patient-treatment-data"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

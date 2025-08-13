@@ -1,0 +1,127 @@
+{
+  "buttons": [
+    {
+      "id": "navigate",
+      "type": "button",
+      "text": "Add",
+      "theme": "btn_black",
+      "path": "/patients/records/add"
+    },
+    {
+      "id": "export",
+      "type": "button",
+      "text": "Export",
+      "theme": "btn_black"
+    }
+  ],
+  "title": "Patient Records",
+  "rowLayouts": [
+    {
+      "columns": [
+        {
+          "size": {
+            "xl": 12,
+            "lg": 12,
+            "md": 12,
+            "sm": 12
+          },
+          "elements": [
+            {
+              "type": "table",
+              "name": "patient-records-table",
+              "content": {
+                "options": {
+                  "title": {
+                    "text": "Patient Records"
+                  },
+                  "columns": [
+                    {
+                      "type": "text",
+                      "label": "Patient ID",
+                      "name": "patientId",
+                      "showSort": true,
+                      "showFilter": true,
+                      "filter": {
+                        "showMenu": true,
+                        "showDropdown": false,
+                        "dropdownData": []
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "label": "Patient Name",
+                      "name": "PatientName",
+                      "showSort": true,
+                      "showFilter": true,
+                      "filter": {
+                        "showMenu": true,
+                        "showDropdown": false,
+                        "dropdownData": []
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "label": "Age",
+                      "name": "Age",
+                      "showSort": true,
+                      "showFilter": true,
+                      "filter": {
+                        "showMenu": true,
+                        "showDropdown": false,
+                        "dropdownData": []
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "label": "Gender",
+                      "name": "Gender",
+                      "showSort": true,
+                      "showFilter": true,
+                      "filter": {
+                        "showMenu": true,
+                        "showDropdown": false,
+                        "dropdownData": []
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "label": "Contact Number",
+                      "name": "ContactNumber",
+                      "showSort": true,
+                      "showFilter": true,
+                      "filter": {
+                        "showMenu": true,
+                        "showDropdown": false,
+                        "dropdownData": []
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "label": "Date of Birth",
+                      "name": "DateOfBirth",
+                      "showSort": true,
+                      "showFilter": true,
+                      "filter": {
+                        "showMenu": true,
+                        "showDropdown": false,
+                        "dropdownData": []
+                      }
+                    }
+                  ],
+                  "actions": {
+                    "show": true,
+                    "header": "Actions",
+                    "buttons": ["view", "edit", "delete"]
+                  }
+                },
+                "data": {
+                  "url": "patient-records-data"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -38,10 +38,10 @@ const getComponent = (route: RouteConfigModel) => {
 
   return route.isPrivate ? (
     <PrivateRoute>
-      <PageCreator {...route} />
+      <PageCreator key={route.path} {...route} />
     </PrivateRoute>
   ) : (
-    <PageCreator {...route} />
+    <PageCreator key={route.path} {...route} />
   );
 };
 

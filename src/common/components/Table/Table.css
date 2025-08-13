@@ -155,6 +155,7 @@
 .p-paginator .p-disabled {
   opacity: 0.5 !important;
   cursor: not-allowed !important;
+  border-radius: 30px;
 }
 
 /* Status Tag Styles */
@@ -285,7 +286,7 @@
 .action-buttons .view-action {
   background-color: #f0f0f0;
   width: 60px;
-  font-size: 12px;
+  font-size: 16px;
   box-shadow: 0rem -.0625rem 0rem 0rem #b5b5b5 inset, 0rem 0rem 0rem .0625rem rgba(0, 0, 0, .1) inset, 0rem .03125rem 0rem .09375rem #FFF inset;
   border-color: transparent;
   border-radius: .5rem;
@@ -295,7 +296,7 @@
 .action-buttons .edit-action {
   background-color: #ddd;
   width: 60px;
-  font-size: 12px;
+  font-size: 16px;
   box-shadow: 0rem -.0625rem 0rem 0rem #b5b5b5 inset, 0rem 0rem 0rem .0625rem rgba(0, 0, 0, .1) inset, 0rem .03125rem 0rem .09375rem #FFF inset;
   border-color: transparent;
   border-radius: .5rem;
@@ -306,7 +307,7 @@
   background-color: white;
   width: 60px;
   border-color: transparent;
-  font-size: 12px;
+  font-size: 16px;
   border-radius: .5rem;
   box-shadow: 0rem -.0625rem 0rem 0rem #b5b5b5 inset, 0rem 0rem 0rem .0625rem rgba(0, 0, 0, .1) inset, 0rem .03125rem 0rem .09375rem #FFF inset;
   color: rgba(142, 11, 33, 1);

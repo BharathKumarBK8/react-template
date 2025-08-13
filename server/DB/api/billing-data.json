@@ -1,0 +1,158 @@
+[
+  {
+    "patientId": "PAT-001",
+    "amount": "150",
+    "description": "Dental Cleaning - Routine checkup",
+    "id": 1
+  },
+  {
+    "patientId": "PAT-001",
+    "amount": "250",
+    "description": "Composite Filling - Tooth 14",
+    "id": 2
+  },
+  {
+    "patientId": "PAT-002",
+    "amount": "800",
+    "description": "Root Canal Treatment - Tooth 36",
+    "id": 3
+  },
+  {
+    "patientId": "PAT-003",
+    "amount": "850",
+    "description": "Root Canal and Crown Impression",
+    "id": 4
+  },
+  {
+    "patientId": "PAT-004",
+    "amount": "400",
+    "description": "Professional Teeth Whitening",
+    "id": 5
+  },
+  {
+    "patientId": "PAT-005",
+    "amount": "1200",
+    "description": "Ceramic Crown Placement - Tooth 16",
+    "id": 6
+  },
+  {
+    "patientId": "PAT-006",
+    "amount": "200",
+    "description": "Deep Cleaning and Scaling",
+    "id": 7
+  },
+  {
+    "patientId": "PAT-007",
+    "amount": "300",
+    "description": "Wisdom Tooth Extraction",
+    "id": 8
+  },
+  {
+    "patientId": "PAT-008",
+    "amount": "100",
+    "description": "Orthodontic Consultation",
+    "id": 9
+  },
+  {
+    "patientId": "PAT-009",
+    "amount": "180",
+    "description": "Amalgam Filling - Tooth 47",
+    "id": 10
+  },
+  {
+    "patientId": "PAT-010",
+    "amount": "2500",
+    "description": "Dental Implant Placement - Tooth 25",
+    "id": 11
+  },
+  {
+    "patientId": "PAT-011",
+    "amount": "120",
+    "description": "Routine 6-month Cleaning",
+    "id": 12
+  },
+  {
+    "patientId": "PAT-012",
+    "amount": "1800",
+    "description": "Porcelain Veneers - Front Teeth",
+    "id": 13
+  },
+  {
+    "patientId": "PAT-013",
+    "amount": "750",
+    "description": "Endodontic Treatment - Tooth 26",
+    "id": 14
+  },
+  {
+    "patientId": "PAT-014",
+    "amount": "2200",
+    "description": "3-Unit Bridge Placement",
+    "id": 15
+  },
+  {
+    "patientId": "PAT-015",
+    "amount": "600",
+    "description": "Periodontal Therapy",
+    "id": 16
+  },
+  {
+    "patientId": "PAT-016",
+    "amount": "130",
+    "description": "Preventive Cleaning",
+    "id": 17
+  },
+  {
+    "patientId": "PAT-017",
+    "amount": "220",
+    "description": "Composite Restoration",
+    "id": 18
+  },
+  {
+    "patientId": "PAT-018",
+    "amount": "150",
+    "description": "Braces Adjustment",
+    "id": 19
+  },
+  {
+    "patientId": "PAT-019",
+    "amount": "1100",
+    "description": "Crown Replacement - Tooth 15",
+    "id": 20
+  },
+  {
+    "patientId": "PAT-020",
+    "amount": "200",
+    "description": "Emergency Treatment - Pain Relief",
+    "id": 21
+  },
+  {
+    "patientId": "PAT-005",
+    "amount": "80",
+    "description": "Crown Follow-up and Adjustment",
+    "id": 22
+  },
+  {
+    "patientId": "PAT-010",
+    "amount": "800",
+    "description": "Implant Crown Placement",
+    "id": 23
+  },
+  {
+    "patientId": "PAT-001",
+    "amount": "50",
+    "description": "Payment Plan - Partial Payment",
+    "id": 24
+  },
+  {
+    "patientId": "PAT-012",
+    "amount": "200",
+    "description": "Veneer Maintenance",
+    "id": 25
+  },
+  {
+    "patientId": "PAT-001",
+    "amount": "200",
+    "description": "Paid",
+    "id": 26
+  }
+]

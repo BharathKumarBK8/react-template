@@ -3,24 +3,22 @@
     {
       "id": "navigate",
       "type": "button",
-      "text": "Add",
+      "text": "Add Invoice",
       "theme": "btn_black",
-      "path": "/patients/records/add"
+      "path": "/invoices/add"
     },
     {
-      "id":"export",
+      "id": "export",
       "type": "button",
       "text": "Export",
       "theme": "btn_black"
     }
-
   ],
-  "title": "Patient Records",
+  "title": "Invoice Records",
   "rowLayouts": [
     {
       "columns": [
         {
-          
           "size": {
             "xl": 12,
             "lg": 12,
@@ -30,17 +28,17 @@
           "elements": [
             {
               "type": "table",
-              "name": "patient-records-table",
+              "name": "invoice-records-table",
               "content": {
                 "options": {
                   "title": {
-                    "text": "Patient Records"
+                    "text": "Invoice Records"
                   },
                   "columns": [
                     {
                       "type": "text",
-                      "label": "Patient Name",
-                      "name": "PatientName",
+                      "label": "Invoice Number",
+                      "name": "invoiceNumber",
                       "showSort": true,
                       "showFilter": true,
                       "filter": {
@@ -51,8 +49,20 @@
                     },
                     {
                       "type": "text",
-                      "label": "Age",
-                      "name": "Age",
+                      "label": "Patient ID",
+                      "name": "patientId",
+                      "showSort": true,
+                      "showFilter": true,
+                      "filter": {
+                        "showMenu": true,
+                        "showDropdown": false,
+                        "dropdownData": []
+                      }
+                    },
+                    {
+                      "type": "datetime",
+                      "label": "Invoice Date",
+                      "name": "invoiceDate",
                       "showSort": true,
                       "showFilter": true,
                       "filter": {
@@ -63,8 +73,8 @@
                     },
                     {
                       "type": "text",
-                      "label": "Gender",
-                      "name": "Gender",
+                      "label": "Total Amount",
+                      "name": "totalAmount",
                       "showSort": true,
                       "showFilter": true,
                       "filter": {
@@ -75,76 +85,25 @@
                     },
                     {
                       "type": "text",
-                      "label": "Contact Number",
-                      "name": "ContactNumber",
+                      "label": "Payment Status",
+                      "name": "paymentStatus",
                       "showSort": true,
                       "showFilter": true,
                       "filter": {
                         "showMenu": true,
-                        "showDropdown": false,
-                        "dropdownData": []
-                      }
-                    },
-                    {
-                      "type": "text",
-                      "label": "Date of Birth",
-                      "name": "DateOfBirth",
-                      "showSort": true,
-                      "showFilter": true,
-                      "filter": {
-                        "showMenu": true,
-                        "showDropdown": false,
-                        "dropdownData": []
+                        "showDropdown": true,
+                        "dropdownData": ["Pending", "Paid", "Overdue"]
                       }
                     }
                   ],
-                  "style": {
-                    "table": {
-                      "width": "50px",
-                      "fontFamily": "Inter, serif",
-                      "background": "",
-                      "marginLeft": "10px",
-                      "marginRight": "10px"
-                    },
-                    "searchInput": {
-                      "padding": "0.5rem",
-                      "borderRadius": "4px",
-                      "border": "1px solid #000",
-                      "width": "150px",
-                      "backgroundColor": "#ffffff"
-                    },
-                    "dropdown": {
-                      "width": "200px"
-                    },
-                    "bodyCell": {
-                      "padding": "12px 16px",
-                      "fontSize": "14px",
-                      "color": "black",
-                      "border": "1px solid #000",
-                      "backgroundColor": "#c4fff9",
-                      "width": ""
-                    },
-                    "actions": {
-                      "show": true,
-                      "header": "Actions",
-                      "buttons": [
-                        "edit",
-                        "delete"
-                      ]
-                    }
-                  },
                   "actions": {
                     "show": true,
                     "header": "Actions",
-                    "buttons": [
-                      "view",
-                      "edit",
-                      "delete"
-                    ]
+                    "buttons": ["view", "edit", "delete"]
                   }
                 },
                 "data": {
-                  "url": "patientrecords-data"
+                  "url": "invoice-data"
                 }
               }
             }

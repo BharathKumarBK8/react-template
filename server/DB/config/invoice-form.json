@@ -1,0 +1,136 @@
+{
+  "buttons": [
+    {
+      "id": "form_clear",
+      "type": "button",
+      "text": "Clear",
+      "modes": ["add", "edit"],
+      "style": {
+        "backgroundColor": "#6c757d",
+        "textColor": "#fff",
+        "borderColor": "#6c757d",
+        "boxShadow": "none",
+        "gradient": "none"
+      }
+    },
+    {
+      "id": "form_cancel",
+      "type": "button",
+      "text": "Cancel",
+      "modes": ["add", "edit", "view"],
+      "style": {
+        "backgroundColor": "#dc3545",
+        "textColor": "#fff",
+        "borderColor": "#dc3545",
+        "boxShadow": "none",
+        "gradient": "none"
+      },
+      "path": "/invoices"
+    },
+    {
+      "id": "form_save",
+      "type": "button",
+      "text": "Generate Invoice",
+      "modes": ["add", "edit"],
+      "style": {
+        "backgroundColor": "#28a745",
+        "textColor": "#fff",
+        "borderColor": "#28a745",
+        "boxShadow": "none",
+        "gradient": "none"
+      },
+      "path": "/"
+    }
+  ],
+  "title": "Invoice Details",
+  "rowLayouts": [
+    {
+      "columns": [
+        {
+          "size": { "xl": 12, "lg": 12, "md": 12, "sm": 12 },
+          "elements": [
+            {
+              "name": "invoice-form",
+              "type": "form",
+              "content": {
+                "id": "invoice-form",
+                "formApi": {
+                  "postUrl": "invoice-data",
+                  "updateUrl": "invoice-data/<id>"
+                },
+                "fields": [
+                  {
+                    "type": "textbox",
+                    "content": {
+                      "name": "patientId",
+                      "inputType": "text",
+                      "title": { "text": "Patient ID" },
+                      "validation": { "required": true }
+                    },
+                    "size": { "xl": 6, "lg": 6, "md": 6, "sm": 6 }
+                  },
+                  {
+                    "type": "textbox",
+                    "content": {
+                      "name": "invoiceNumber",
+                      "inputType": "text",
+                      "placeholder": "Auto-generated",
+                      "title": { "text": "Invoice Number" },
+                      "disabled": true
+                    },
+                    "size": { "xl": 6, "lg": 6, "md": 12, "sm": 12 }
+                  },
+                  {
+                    "type": "textbox",
+                    "content": {
+                      "name": "invoiceDate",
+                      "inputType": "date",
+                      "title": { "text": "Invoice Date" },
+                      "validation": { "required": true }
+                    },
+                    "size": { "xl": 6, "lg": 6, "md": 12, "sm": 12 }
+                  },
+                  {
+                    "type": "textbox",
+                    "content": {
+                      "name": "totalAmount",
+                      "inputType": "number",
+                      "placeholder": "Enter total amount",
+                      "title": { "text": "Total Amount" },
+                      "validation": { "required": true }
+                    },
+                    "size": { "xl": 6, "lg": 6, "md": 12, "sm": 12 }
+                  },
+                  {
+                    "type": "dropdown",
+                    "content": {
+                      "name": "paymentStatus",
+                      "title": { "text": "Payment Status" },
+                      "options": [
+                        { "value": "Pending", "label": "Pending" },
+                        { "value": "Paid", "label": "Paid" },
+                        { "value": "Overdue", "label": "Overdue" }
+                      ],
+                      "validation": { "required": true }
+                    },
+                    "size": { "xl": 6, "lg": 6, "md": 12, "sm": 12 }
+                  },
+                  {
+                    "type": "textbox",
+                    "content": {
+                      "name": "notes",
+                      "inputType": "textarea",
+                      "placeholder": "Enter invoice notes",
+                      "title": { "text": "Notes" }
+                    },
+                    "size": { "xl": 12, "lg": 12, "md": 12, "sm": 12 }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

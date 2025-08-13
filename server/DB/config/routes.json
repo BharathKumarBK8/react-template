@@ -1,28 +1,58 @@
 [
   {
-    "path":"/patients/records",
-    "configPath":"patientrecordslist",
-    "isPrivate":true
+    "path": "/patients/records",
+    "configPath": "patient-records-list",
+    "isPrivate": true
   },
   {
-    "path":"/patients/records/add",
-    "configPath":"patientrecordsform",
-    "isPrivate":true
+    "path": "/patients/records/add",
+    "configPath": "patient-records-form",
+    "isPrivate": true
   },
   {
-    "path":"/patients/records/:id/edit",
-    "configPath":"patientrecordsform",
-    "isPrivate":true
+    "path": "/patients/records/:id/edit",
+    "configPath": "patient-records-form",
+    "isPrivate": true
   },
   {
-    "path":"/patients/records/:id/view",
-    "configPath":"patientrecordsform",
-    "isPrivate":true
+    "path": "/patients/records/:id/view",
+    "configPath": "patient-records-form",
+    "isPrivate": true
   },
   {
-    "path":"/patients/records/:id/delete",
-    "configPath":"patientrecordslist",
-    "isPrivate":true
+    "path": "/patients/records/:id/delete",
+    "configPath": "patient-records-list",
+    "isPrivate": true
+  },
+  {
+    "path": "/patients/records/:id/treatments/add",
+    "configPath": "treatment-form",
+    "isPrivate": true
+  },
+  {
+    "path": "/patients/records/:id/billings/add",
+    "configPath": "billing-form",
+    "isPrivate": true
+  },
+  {
+    "path": "/patient/records/:id/invoices/add",
+    "configPath": "invoice-form",
+    "isPrivate": true
+  },
+  {
+    "path": "/billing/invoices",
+    "configPath": "invoice-list",
+    "isPrivate": true
+  },
+  {
+    "path": "/treatments",
+    "configPath": "treatment-list",
+    "isPrivate": true
+  },
+  {
+    "path": "/treatments/add",
+    "configPath": "treatment-form",
+    "isPrivate": true
   },
   {
     "path": "/apps/testApp",

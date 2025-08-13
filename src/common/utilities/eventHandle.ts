@@ -6,14 +6,17 @@ import {
   TOAST_SUMMARIES,
   SUCCESS_MESSAGES,
 } from "../../common/utilities/constants";
+import { convertUrlParamsToValues } from "./utils";
 import { getData } from "../../api/dataAPI";
 
 export enum EVENT_TYPE {
   FORM_SAVE = "form_save",
   FORM_CLEAR = "form_clear",
   FORM_CANCEL = "form_cancel",
+  FORM_NAVIGATE = "form_navigate",
+  FORM_SAVE_AND_NAVIGATE = "form_save_and_navigate",
   NAVIGATE = "navigate",
-  EXPORT = "export"
+  EXPORT = "export",
 }
 
 const getPushConfigData = async () => {
@@ -108,6 +111,27 @@ const handleEvents = async (
         }
         return success;
       }
+
+      if (item.id === EVENT_TYPE.FORM_SAVE_AND_NAVIGATE) {
+        const success = await compRef.submitForm();
+        if (success && item.path) {
+          const formData = compRef.getFormData?.() || {};
+
+          const processedPath = convertUrlParamsToValues(item.path, formData);
+
+          navigate(processedPath, { state: { rowData: formData } });
+        }
+        return success;
+      }
+      if (item.id === EVENT_TYPE.FORM_NAVIGATE) {
+        if (item.path) {
+          const formData = compRef.getFormData?.() || {};
+          const processedPath = convertUrlParamsToValues(item.path, formData);
+          navigate(processedPath, { state: { rowData: formData } });
+        }
+        return true;
+      }
+
       if (item.id === EVENT_TYPE.FORM_CLEAR) {
         compRef.clearForm();
         return true;
@@ -124,18 +148,18 @@ const handleEvents = async (
   if (item.id === EVENT_TYPE.NAVIGATE && item.path) {
     navigate(item.path);
     return true;
-  }if (item.id === EVENT_TYPE.EXPORT) { {
-  for (const Key of Object.keys(compRefs.current)) {
-    const compRef = compRefs.current[Key];
-    if (compRef?.exportToExcel) {
-      compRef.exportToExcel();
-      return true;
+  }
+  if (item.id === EVENT_TYPE.EXPORT) {
+    {
+      for (const Key of Object.keys(compRefs.current)) {
+        const compRef = compRefs.current[Key];
+        if (compRef?.exportToExcel) {
+          compRef.exportToExcel();
+          return true;
+        }
+      }
     }
   }
-}
-  }
-
-
 
   if (item.id === "pushconfig") {
     try {

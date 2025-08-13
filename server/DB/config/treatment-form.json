@@ -1,0 +1,193 @@
+{
+  "buttons": [
+    {
+      "id": "form_clear",
+      "type": "button",
+      "text": "Clear",
+      "modes": ["add", "edit"],
+      "style": {
+        "backgroundColor": "#6c757d",
+        "textColor": "#fff",
+        "borderColor": "#6c757d",
+        "boxShadow": "none",
+        "gradient": "none"
+      }
+    },
+    {
+      "id": "form_cancel",
+      "type": "button",
+      "text": "Cancel",
+      "modes": ["add", "edit", "view"],
+      "style": {
+        "backgroundColor": "#dc3545",
+        "textColor": "#fff",
+        "borderColor": "#dc3545",
+        "boxShadow": "none",
+        "gradient": "none"
+      },
+      "path": "/treatments"
+    },
+    {
+      "id": "form_save_and_navigate",
+      "type": "button",
+      "text": "Save",
+      "modes": ["add", "edit"],
+      "style": {
+        "backgroundColor": "#000",
+        "textColor": "#fff",
+        "borderColor": "#000",
+        "boxShadow": "none",
+        "gradient": "none"
+      },
+      "path": "/patients/records/<patientId>/billings/add"
+    }
+  ],
+  "title": "Treatment Details",
+  "rowLayouts": [
+    {
+      "columns": [
+        {
+          "size": {
+            "xl": 12,
+            "lg": 12,
+            "md": 12,
+            "sm": 12
+          },
+          "elements": [
+            {
+              "name": "treatment-form",
+              "type": "form",
+              "content": {
+                "id": "treatment-form",
+                "formApi": {
+                  "getUrl": "patient-treatment-data",
+                  "postUrl": "patient-treatment-data",
+                  "updateUrl": "patient-treatment-data/<patientId>"
+                },
+                "fields": [
+                  {
+                    "type": "textbox",
+                    "content": {
+                      "name": "patientId",
+                      "inputType": "text",
+                      "placeholder": "Enter patient ID",
+                      "title": { "text": "Patient ID" },
+                      "validation": { "required": true }
+                    },
+                    "size": { "xl": 0, "lg": 0, "md": 0, "sm": 0 }
+                  },
+                  {
+                    "type": "textbox",
+                    "content": {
+                      "name": "treatmentDate",
+                      "inputType": "date",
+                      "placeholder": "Select treatment date",
+                      "position": "horizontal",
+                      "value": "",
+                      "title": {
+                        "text": "Treatment Date"
+                      },
+                      "validation": {
+                        "required": true
+                      },
+                      "onError": {
+                        "position": "below",
+                        "message": {
+                          "required": "Treatment Date is required"
+                        }
+                      }
+                    },
+                    "size": {
+                      "xl": 6,
+                      "lg": 6,
+                      "md": 12,
+                      "sm": 12
+                    }
+                  },
+                  {
+                    "type": "textbox",
+                    "content": {
+                      "name": "treatmentType",
+                      "inputType": "text",
+                      "placeholder": "Enter treatment type",
+                      "position": "horizontal",
+                      "value": "",
+                      "title": {
+                        "text": "Treatment Type"
+                      },
+                      "validation": {
+                        "required": true
+                      },
+                      "onError": {
+                        "position": "below",
+                        "message": {
+                          "required": "Treatment Type is required"
+                        }
+                      }
+                    },
+                    "size": {
+                      "xl": 6,
+                      "lg": 6,
+                      "md": 12,
+                      "sm": 12
+                    }
+                  },
+                  {
+                    "type": "textbox",
+                    "content": {
+                      "name": "doctor",
+                      "inputType": "text",
+                      "placeholder": "Enter doctor name",
+                      "position": "horizontal",
+                      "value": "",
+                      "title": {
+                        "text": "Doctor"
+                      },
+                      "validation": {
+                        "required": true
+                      },
+                      "onError": {
+                        "position": "below",
+                        "message": {
+                          "required": "Doctor is required"
+                        }
+                      }
+                    },
+                    "size": {
+                      "xl": 6,
+                      "lg": 6,
+                      "md": 12,
+                      "sm": 12
+                    }
+                  },
+                  {
+                    "type": "textbox",
+                    "content": {
+                      "name": "notes",
+                      "inputType": "textarea",
+                      "placeholder": "Enter treatment notes",
+                      "position": "horizontal",
+                      "value": "",
+                      "title": {
+                        "text": "Notes"
+                      },
+                      "validation": {
+                        "required": false
+                      }
+                    },
+                    "size": {
+                      "xl": 12,
+                      "lg": 12,
+                      "md": 12,
+                      "sm": 12
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

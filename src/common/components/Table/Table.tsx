@@ -1,4 +1,10 @@
-import { useState, useEffect, useRef, forwardRef, useImperativeHandle } from "react";
+import {
+  useState,
+  useEffect,
+  useRef,
+  forwardRef,
+  useImperativeHandle,
+} from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import {
   TABLE_DATA,
@@ -55,30 +61,31 @@ const Table = forwardRef<any, TABLE_DATA>((props, ref) => {
     toastRef.current?.show(title, detail, severity);
   };
 
-const exportToExcel = () => {
-  if (!tableData.length || !props.options?.columns) return;
-  
-  const headers = props.options.columns.map(col => col.label).join(",");
-  const rows = tableData.map(row => 
-    props.options!.columns!.map(col => row[col.name] || "").join(",")
-  ).join("\n");
-  
-  const csvContent = "data:text/csv;charset=utf-8," + headers + "\n" + rows;
-  
-  // Use table title or a default name
-  const filename = props.options?.title?.text 
-    ? `${props.options.title.text.replace(/\s+/g, '-')}.csv`
-    : "table-export.csv";
-  
-  const link = document.createElement("a");
-  link.setAttribute("href", encodeURI(csvContent));
-  link.setAttribute("download", filename);
-  link.click();
-};
+  const exportToExcel = () => {
+    if (!tableData.length || !props.options?.columns) return;
 
+    const headers = props.options.columns.map((col) => col.label).join(",");
+    const rows = tableData
+      .map((row) =>
+        props.options!.columns!.map((col) => row[col.name] || "").join(",")
+      )
+      .join("\n");
+
+    const csvContent = "data:text/csv;charset=utf-8," + headers + "\n" + rows;
+
+    // Use table title or a default name
+    const filename = props.options?.title?.text
+      ? `${props.options.title.text.replace(/\s+/g, "-")}.csv`
+      : "table-export.csv";
+
+    const link = document.createElement("a");
+    link.setAttribute("href", encodeURI(csvContent));
+    link.setAttribute("download", filename);
+    link.click();
+  };
 
   useImperativeHandle(ref, () => ({
-    exportToExcel
+    exportToExcel,
   }));
 
   useEffect(() => {
@@ -238,7 +245,7 @@ const exportToExcel = () => {
     }
     return undefined; // Use default PrimeReact filtering for other column types
   };
-  
+
   const hasFilterableColumns = () => {
     if (!props.options?.columns) return false;
     return props.options.columns.some(
@@ -283,7 +290,7 @@ const exportToExcel = () => {
     ...TABLE_DEFAULT_STYLES.bodyCell,
     ...(props.options?.style?.bodyCell || {}),
   };
-  
+
   const renderSearch = () => {
     return (
       <div className="table-header">
@@ -365,21 +372,24 @@ const exportToExcel = () => {
       <div className="action-buttons">
         {actions.buttons.includes("view") && (
           <Button
-            label="View"
+            /* label="View" */
+            icon="bi bi-eye-fill"
             className="view-action"
             onClick={() => onView(rowData)}
           />
         )}
         {actions.buttons.includes("edit") && (
           <Button
-            label="Edit"
+            /* label="Edit" */
+            icon="bi bi-pencil-fill"
             className="edit-action"
             onClick={() => onEdit(rowData)}
           />
         )}
         {actions.buttons.includes("delete") && (
           <Button
-            label="Delete"
+            /* label="Delete" */
+            icon="bi bi-trash3-fill"
             className="delete-action"
             onClick={() => onDelete(rowData)}
           />

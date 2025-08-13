@@ -28,6 +28,7 @@ export interface ComponentRendererRef {
   submitForm: () => Promise<boolean>;
   clearForm: () => void;
   exportToExcel: () => void;
+  getFormData?: () => Record<string, any>;
 }
 
 export interface ComponentRefsMap {
@@ -41,15 +42,18 @@ function PageRenderer(config: PageModel) {
   const location = useLocation();
   const isHomePage = location.pathname === "/" || location.pathname === "";
 
-  const currentMode = location.pathname.includes('/view') ? 'view' 
-  : location.pathname.includes('/edit') ? 'edit' 
-  : location.pathname.includes('/add') ? 'add' 
-  : 'list';
+  const currentMode = location.pathname.includes("/view")
+    ? "view"
+    : location.pathname.includes("/edit")
+    ? "edit"
+    : location.pathname.includes("/add")
+    ? "add"
+    : "list";
 
-const filteredButtons = config?.buttons?.filter(button => 
-  !button.modes || button.modes.includes(currentMode)
-) || [];
-
+  const filteredButtons =
+    config?.buttons?.filter(
+      (button) => !button.modes || button.modes.includes(currentMode)
+    ) || [];
 
   const getTableDataUrl = () => {
     const allColumns: COLUMNS[] = [];
@@ -100,13 +104,13 @@ const filteredButtons = config?.buttons?.filter(button =>
         return <Card {...(item.content as CARD_DATA)} />;
       case DATA_DISPLAY_TYPE.TABLE:
         return (
-                <Table 
-                ref={(el) => {
-                if (item.name) compRefs.current[item.name] = el;
-                    }}
-                {...(item.content as TABLE_DATA)} 
-                />
-                );
+          <Table
+            ref={(el) => {
+              if (item.name) compRefs.current[item.name] = el;
+            }}
+            {...(item.content as TABLE_DATA)}
+          />
+        );
       case DATA_DISPLAY_TYPE.PIE:
         return <Pie {...(item.content as PIE_DATA)} />;
       case DATA_DISPLAY_TYPE.IMAGE:

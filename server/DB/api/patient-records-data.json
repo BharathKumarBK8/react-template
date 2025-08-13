@@ -1,0 +1,182 @@
+[
+  {
+    "patientId": "PAT-001",
+    "PatientName": "Reena",
+    "Gender": "Female",
+    "DateOfBirth": "1990-01-01",
+    "Age": "34",
+    "ContactNumber": "9876543210",
+    "id": 1
+  },
+  {
+    "patientId": "PAT-002",
+    "PatientName": "Ravi",
+    "Gender": "Male",
+    "DateOfBirth": "1984-05-20",
+    "Age": "40",
+    "ContactNumber": "9090909090",
+    "id": 2
+  },
+  {
+    "patientId": "PAT-003",
+    "PatientName": "Bharath",
+    "Gender": "Male",
+    "DateOfBirth": "2000-08-02",
+    "Age": "24",
+    "ContactNumber": "9994038356",
+    "id": 3
+  },
+  {
+    "patientId": "PAT-004",
+    "PatientName": "Priya",
+    "Gender": "Female",
+    "DateOfBirth": "1995-03-15",
+    "Age": "29",
+    "ContactNumber": "9876543211",
+    "id": 4
+  },
+  {
+    "patientId": "PAT-005",
+    "PatientName": "Arjun",
+    "Gender": "Male",
+    "DateOfBirth": "1988-11-22",
+    "Age": "35",
+    "ContactNumber": "9876543212",
+    "id": 5
+  },
+  {
+    "patientId": "PAT-006",
+    "PatientName": "Kavya",
+    "Gender": "Female",
+    "DateOfBirth": "1992-07-08",
+    "Age": "32",
+    "ContactNumber": "9876543213",
+    "id": 6
+  },
+  {
+    "patientId": "PAT-007",
+    "PatientName": "Vikram",
+    "Gender": "Male",
+    "DateOfBirth": "1985-12-30",
+    "Age": "38",
+    "ContactNumber": "9876543214",
+    "id": 7
+  },
+  {
+    "patientId": "PAT-008",
+    "PatientName": "Anita",
+    "Gender": "Female",
+    "DateOfBirth": "1998-04-12",
+    "Age": "26",
+    "ContactNumber": "9876543215",
+    "id": 8
+  },
+  {
+    "patientId": "PAT-009",
+    "PatientName": "Rohit",
+    "Gender": "Male",
+    "DateOfBirth": "1991-09-18",
+    "Age": "33",
+    "ContactNumber": "9876543216",
+    "id": 9
+  },
+  {
+    "patientId": "PAT-010",
+    "PatientName": "Meera",
+    "Gender": "Female",
+    "DateOfBirth": "1987-06-25",
+    "Age": "37",
+    "ContactNumber": "9876543217",
+    "id": 10
+  },
+  {
+    "patientId": "PAT-011",
+    "PatientName": "Kiran",
+    "Gender": "Male",
+    "DateOfBirth": "1993-02-14",
+    "Age": "31",
+    "ContactNumber": "9876543218",
+    "id": 11
+  },
+  {
+    "patientId": "PAT-012",
+    "PatientName": "Deepika",
+    "Gender": "Female",
+    "DateOfBirth": "1996-10-05",
+    "Age": "28",
+    "ContactNumber": "9876543219",
+    "id": 12
+  },
+  {
+    "patientId": "PAT-013",
+    "PatientName": "Suresh",
+    "Gender": "Male",
+    "DateOfBirth": "1982-01-28",
+    "Age": "42",
+    "ContactNumber": "9876543220",
+    "id": 13
+  },
+  {
+    "patientId": "PAT-014",
+    "PatientName": "Lakshmi",
+    "Gender": "Female",
+    "DateOfBirth": "1989-08-16",
+    "Age": "35",
+    "ContactNumber": "9876543221",
+    "id": 14
+  },
+  {
+    "patientId": "PAT-015",
+    "PatientName": "Arun",
+    "Gender": "Male",
+    "DateOfBirth": "1994-12-03",
+    "Age": "29",
+    "ContactNumber": "9876543222",
+    "id": 15
+  },
+  {
+    "patientId": "PAT-016",
+    "PatientName": "Sneha",
+    "Gender": "Female",
+    "DateOfBirth": "1997-05-21",
+    "Age": "27",
+    "ContactNumber": "9876543223",
+    "id": 16
+  },
+  {
+    "patientId": "PAT-017",
+    "PatientName": "Rajesh",
+    "Gender": "Male",
+    "DateOfBirth": "1986-03-09",
+    "Age": "38",
+    "ContactNumber": "9876543224",
+    "id": 17
+  },
+  {
+    "patientId": "PAT-018",
+    "PatientName": "Pooja",
+    "Gender": "Female",
+    "DateOfBirth": "1999-11-17",
+    "Age": "25",
+    "ContactNumber": "9876543225",
+    "id": 18
+  },
+  {
+    "patientId": "PAT-019",
+    "PatientName": "Manoj",
+    "Gender": "Male",
+    "DateOfBirth": "1983-07-04",
+    "Age": "41",
+    "ContactNumber": "9876543226",
+    "id": 19
+  },
+  {
+    "patientId": "PAT-020",
+    "PatientName": "Divya",
+    "Gender": "Female",
+    "DateOfBirth": "1990-09-12",
+    "Age": "34",
+    "ContactNumber": "9876543227",
+    "id": 20
+  }
+]

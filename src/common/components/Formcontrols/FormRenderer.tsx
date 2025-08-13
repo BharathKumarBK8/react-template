@@ -52,8 +52,6 @@ const FormRenderer = forwardRef<ComponentRendererRef, FORM_DATA>(
     const [isEditMode, setIsEditMode] = useState(false);
     const [isViewMode, setIsViewMode] = useState(false);
 
-
-
     const { rowData } = location.state || {};
 
     const showToast = (
@@ -119,15 +117,35 @@ const FormRenderer = forwardRef<ComponentRendererRef, FORM_DATA>(
     };
 
     const getFormData = (): Record<string, any> => {
-      return formFields.reduce((acc, field) => {
-        const fieldName = _.get(field, "content.name");
-        const fieldRef = fieldName && fieldRefs.current[fieldName];
-        const value = _.invoke(fieldRef, "getValue");
-        if (value !== undefined) {
-          acc[fieldName] = value;
+      const data: Record<string, any> = {};
+
+      // First, get values from formFields (for rowData values like patientId)
+      formFields.forEach((field) => {
+        if (
+          field.content?.name &&
+          field.content?.value !== undefined &&
+          field.content?.value !== ""
+        ) {
+          data[field.content.name] = field.content.value;
         }
-        return acc;
-      }, {} as Record<string, any>);
+      });
+
+      // Then, get current values from refs (for user input)
+      Object.keys(fieldRefs.current).forEach((fieldName) => {
+        const fieldRef = fieldRefs.current[fieldName];
+        if (fieldRef && typeof fieldRef.getValue === "function") {
+          try {
+            const value = fieldRef.getValue();
+            if (value !== undefined && value !== "") {
+              data[fieldName] = value;
+            }
+          } catch (e) {
+            // Ignore ref errors
+          }
+        }
+      });
+
+      return data;
     };
 
     const submitForm = async (): Promise<boolean> => {
@@ -198,10 +216,9 @@ const FormRenderer = forwardRef<ComponentRendererRef, FORM_DATA>(
     }, []);
 
     useEffect(() => {
-       setIsEditMode(location.pathname.includes("edit"));
-       setIsViewMode(location.pathname.includes("view"));
-      }, [location.pathname]);
-
+      setIsEditMode(location.pathname.includes("edit"));
+      setIsViewMode(location.pathname.includes("view"));
+    }, [location.pathname]);
 
     useEffect(() => {
       if (rowData) {
@@ -223,6 +240,8 @@ const FormRenderer = forwardRef<ComponentRendererRef, FORM_DATA>(
     useImperativeHandle(ref, () => ({
       submitForm,
       clearForm,
+      getFormData,
+      exportToExcel() {},
     }));
 
     if (isLoading) {
@@ -247,8 +266,9 @@ const FormRenderer = forwardRef<ComponentRendererRef, FORM_DATA>(
             >
               {field.type === "textbox" && field.content && (
                 <TextBox
-                  data={{...(field.content as TEXTBOX_DATA),
-                    disabled: isViewMode
+                  data={{
+                    ...(field.content as TEXTBOX_DATA),
+                    disabled: isViewMode || field.content?.disabled,
                   }}
                   ref={(el) =>
                     field.content?.name &&
@@ -258,8 +278,9 @@ const FormRenderer = forwardRef<ComponentRendererRef, FORM_DATA>(
               )}
               {field.type === "dropdown" && field.content && (
                 <DropDown
-                  data={{...(field.content as FORM_DROPDOWN_DATA),
-                    disabled: isViewMode
+                  data={{
+                    ...(field.content as FORM_DROPDOWN_DATA),
+                    disabled: isViewMode || field.content?.disabled,
                   }}
                   ref={(el) =>
                     field.content?.name &&
@@ -272,8 +293,9 @@ const FormRenderer = forwardRef<ComponentRendererRef, FORM_DATA>(
               )}
               {field.type === "radiobutton" && field.content && (
                 <Radiobutton
-                  data={{...(field.content as RADIO_BUTTON_DATA),
-                    disabled: isViewMode
+                  data={{
+                    ...(field.content as RADIO_BUTTON_DATA),
+                    disabled: isViewMode || field.content?.disabled,
                   }}
                   ref={(el) =>
                     field.content?.name &&
@@ -284,8 +306,9 @@ const FormRenderer = forwardRef<ComponentRendererRef, FORM_DATA>(
               {field.type === "checkbox" && field.content && (
                 <CheckBox
                   {...(field.content as CHECK_BOX_DATA)}
-                  data={{...(field.content as CHECK_BOX_DATA),
-                    disabled: isViewMode
+                  data={{
+                    ...(field.content as CHECK_BOX_DATA),
+                    disabled: isViewMode || field.content?.disabled,
                   }}
                   ref={(el) =>
                     field.content?.name &&
@@ -295,8 +318,9 @@ const FormRenderer = forwardRef<ComponentRendererRef, FORM_DATA>(
               )}
               {field.type === "datetime" && field.content && (
                 <DateTime
-                  data={{...(field.content as DATE_TIME_DATA),
-                    disabled: isViewMode
+                  data={{
+                    ...(field.content as DATE_TIME_DATA),
+                    disabled: isViewMode || field.content?.disabled,
                   }}
                   ref={(el) =>
                     field.content?.name &&
@@ -306,8 +330,9 @@ const FormRenderer = forwardRef<ComponentRendererRef, FORM_DATA>(
               )}
               {field.type === "imageupload" && field.content && (
                 <ImageUpload
-                  data={{...(field.content as IMAGE_UPLOAD_DATA),
-                    disabled: isViewMode
+                  data={{
+                    ...(field.content as IMAGE_UPLOAD_DATA),
+                    disabled: isViewMode || field.content?.disabled,
                   }}
                   ref={(el) =>
                     field.content?.name &&

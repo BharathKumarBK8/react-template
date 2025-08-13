@@ -1,0 +1,178 @@
+[
+  {
+    "patientId": "PAT-001",
+    "invoiceDate": "2024-01-15",
+    "totalAmount": "150",
+    "paymentStatus": "Paid",
+    "invoiceNumber": "INV-1705324800000",
+    "id": 1
+  },
+  {
+    "patientId": "PAT-001",
+    "invoiceDate": "2024-07-20",
+    "totalAmount": "300",
+    "paymentStatus": "Pending",
+    "invoiceNumber": "INV-1721433600000",
+    "id": 2
+  },
+  {
+    "patientId": "PAT-002",
+    "invoiceDate": "2024-02-10",
+    "totalAmount": "800",
+    "paymentStatus": "Paid",
+    "invoiceNumber": "INV-1707523200000",
+    "id": 3
+  },
+  {
+    "patientId": "PAT-003",
+    "invoiceDate": "2024-08-10",
+    "totalAmount": "850",
+    "paymentStatus": "Paid",
+    "invoiceNumber": "INV-1723248000000",
+    "id": 4
+  },
+  {
+    "patientId": "PAT-004",
+    "invoiceDate": "2024-03-05",
+    "totalAmount": "400",
+    "paymentStatus": "Paid",
+    "invoiceNumber": "INV-1709596800000",
+    "id": 5
+  },
+  {
+    "patientId": "PAT-005",
+    "invoiceDate": "2024-04-12",
+    "totalAmount": "1280",
+    "paymentStatus": "Partially Paid",
+    "invoiceNumber": "INV-1712880000000",
+    "id": 6
+  },
+  {
+    "patientId": "PAT-006",
+    "invoiceDate": "2024-05-18",
+    "totalAmount": "200",
+    "paymentStatus": "Paid",
+    "invoiceNumber": "INV-1716019200000",
+    "id": 7
+  },
+  {
+    "patientId": "PAT-007",
+    "invoiceDate": "2024-06-22",
+    "totalAmount": "300",
+    "paymentStatus": "Paid",
+    "invoiceNumber": "INV-1719014400000",
+    "id": 8
+  },
+  {
+    "patientId": "PAT-008",
+    "invoiceDate": "2024-07-08",
+    "totalAmount": "100",
+    "paymentStatus": "Paid",
+    "invoiceNumber": "INV-1720396800000",
+    "id": 9
+  },
+  {
+    "patientId": "PAT-009",
+    "invoiceDate": "2024-08-14",
+    "totalAmount": "180",
+    "paymentStatus": "Overdue",
+    "invoiceNumber": "INV-1723593600000",
+    "id": 10
+  },
+  {
+    "patientId": "PAT-010",
+    "invoiceDate": "2024-09-03",
+    "totalAmount": "3300",
+    "paymentStatus": "Partially Paid",
+    "invoiceNumber": "INV-1725321600000",
+    "id": 11
+  },
+  {
+    "patientId": "PAT-011",
+    "invoiceDate": "2024-09-15",
+    "totalAmount": "120",
+    "paymentStatus": "Paid",
+    "invoiceNumber": "INV-1726358400000",
+    "id": 12
+  },
+  {
+    "patientId": "PAT-012",
+    "invoiceDate": "2024-10-01",
+    "totalAmount": "2000",
+    "paymentStatus": "Paid",
+    "invoiceNumber": "INV-1727740800000",
+    "id": 13
+  },
+  {
+    "patientId": "PAT-013",
+    "invoiceDate": "2024-10-12",
+    "totalAmount": "750",
+    "paymentStatus": "Pending",
+    "invoiceNumber": "INV-1728691200000",
+    "id": 14
+  },
+  {
+    "patientId": "PAT-014",
+    "invoiceDate": "2024-11-05",
+    "totalAmount": "2200",
+    "paymentStatus": "Paid",
+    "invoiceNumber": "INV-1730764800000",
+    "id": 15
+  },
+  {
+    "patientId": "PAT-015",
+    "invoiceDate": "2024-11-18",
+    "totalAmount": "600",
+    "paymentStatus": "Overdue",
+    "invoiceNumber": "INV-1731888000000",
+    "id": 16
+  },
+  {
+    "patientId": "PAT-016",
+    "invoiceDate": "2024-12-02",
+    "totalAmount": "130",
+    "paymentStatus": "Paid",
+    "invoiceNumber": "INV-1733097600000",
+    "id": 17
+  },
+  {
+    "patientId": "PAT-017",
+    "invoiceDate": "2024-12-10",
+    "totalAmount": "220",
+    "paymentStatus": "Paid",
+    "invoiceNumber": "INV-1733788800000",
+    "id": 18
+  },
+  {
+    "patientId": "PAT-018",
+    "invoiceDate": "2024-12-15",
+    "totalAmount": "150",
+    "paymentStatus": "Pending",
+    "invoiceNumber": "INV-1734220800000",
+    "id": 19
+  },
+  {
+    "patientId": "PAT-019",
+    "invoiceDate": "2024-12-20",
+    "totalAmount": "1100",
+    "paymentStatus": "Paid",
+    "invoiceNumber": "INV-1734652800000",
+    "id": 20
+  },
+  {
+    "patientId": "PAT-020",
+    "invoiceDate": "2024-12-22",
+    "totalAmount": "200",
+    "paymentStatus": "Paid",
+    "invoiceNumber": "INV-1734825600000",
+    "id": 21
+  },
+  {
+    "patientId": "PAT-001",
+    "invoiceDate": "2025-08-10",
+    "totalAmount": "500",
+    "paymentStatus": "Paid",
+    "invoiceNumber": "INV-1755065961141",
+    "id": 22
+  }
+]

@@ -203,6 +203,8 @@ configRouter.render = (req, res) => {
   res.jsonp(res.locals.data);
 };
 
+
+
 apiRouter.render = (req, res) => {
   // Save changes after each write operation
   if (["POST", "PUT", "PATCH", "DELETE"].includes(req.method)) {
@@ -226,6 +228,17 @@ apiRouter.render = (req, res) => {
 // Add default middlewares
 configServer.use(jsonServer.defaults());
 apiServer.use(jsonServer.defaults());
+
+// Add explicit JSON parsing
+apiServer.use(jsonServer.bodyParser);
+
+apiServer.use('/invoice-data', (req, res, next) => {
+  if (req.method === 'POST') {
+    if (!req.body) req.body = {};
+    req.body.invoiceNumber = `INV-${Date.now()}`;
+  }
+  next();
+});
 
 // Error handling
 configServer.use((err, req, res, next) => {

@@ -1,0 +1,194 @@
+[
+  {
+    "patientId": "PAT-001",
+    "treatmentDate": "2024-01-15",
+    "treatmentType": "Dental Cleaning",
+    "doctor": "Dr. Smith",
+    "notes": "Routine cleaning and checkup",
+    "id": 1
+  },
+  {
+    "patientId": "PAT-001",
+    "treatmentDate": "2024-07-20",
+    "treatmentType": "Filling",
+    "doctor": "Dr. Smith",
+    "notes": "Composite filling on tooth 14",
+    "id": 2
+  },
+  {
+    "patientId": "PAT-002",
+    "treatmentDate": "2024-02-10",
+    "treatmentType": "Root Canal",
+    "doctor": "Dr. Johnson",
+    "notes": "RCT on tooth 36",
+    "id": 3
+  },
+  {
+    "patientId": "PAT-003",
+    "treatmentDate": "2024-08-10",
+    "treatmentType": "Root Canal",
+    "doctor": "Dr. Joe",
+    "notes": "30 - RCT and Crown Impression",
+    "id": 4
+  },
+  {
+    "patientId": "PAT-004",
+    "treatmentDate": "2024-03-05",
+    "treatmentType": "Teeth Whitening",
+    "doctor": "Dr. Brown",
+    "notes": "Professional whitening treatment",
+    "id": 5
+  },
+  {
+    "patientId": "PAT-005",
+    "treatmentDate": "2024-04-12",
+    "treatmentType": "Crown Placement",
+    "doctor": "Dr. Wilson",
+    "notes": "Ceramic crown on tooth 16",
+    "id": 6
+  },
+  {
+    "patientId": "PAT-006",
+    "treatmentDate": "2024-05-18",
+    "treatmentType": "Dental Cleaning",
+    "doctor": "Dr. Davis",
+    "notes": "Deep cleaning and scaling",
+    "id": 7
+  },
+  {
+    "patientId": "PAT-007",
+    "treatmentDate": "2024-06-22",
+    "treatmentType": "Extraction",
+    "doctor": "Dr. Miller",
+    "notes": "Wisdom tooth extraction",
+    "id": 8
+  },
+  {
+    "patientId": "PAT-008",
+    "treatmentDate": "2024-07-08",
+    "treatmentType": "Orthodontic Consultation",
+    "doctor": "Dr. Garcia",
+    "notes": "Initial consultation for braces",
+    "id": 9
+  },
+  {
+    "patientId": "PAT-009",
+    "treatmentDate": "2024-08-14",
+    "treatmentType": "Filling",
+    "doctor": "Dr. Rodriguez",
+    "notes": "Amalgam filling on tooth 47",
+    "id": 10
+  },
+  {
+    "patientId": "PAT-010",
+    "treatmentDate": "2024-09-03",
+    "treatmentType": "Dental Implant",
+    "doctor": "Dr. Martinez",
+    "notes": "Implant placement for tooth 25",
+    "id": 11
+  },
+  {
+    "patientId": "PAT-011",
+    "treatmentDate": "2024-09-15",
+    "treatmentType": "Dental Cleaning",
+    "doctor": "Dr. Anderson",
+    "notes": "Routine 6-month cleaning",
+    "id": 12
+  },
+  {
+    "patientId": "PAT-012",
+    "treatmentDate": "2024-10-01",
+    "treatmentType": "Veneer Placement",
+    "doctor": "Dr. Thomas",
+    "notes": "Porcelain veneers on front teeth",
+    "id": 13
+  },
+  {
+    "patientId": "PAT-013",
+    "treatmentDate": "2024-10-12",
+    "treatmentType": "Root Canal",
+    "doctor": "Dr. Jackson",
+    "notes": "Endodontic treatment on tooth 26",
+    "id": 14
+  },
+  {
+    "patientId": "PAT-014",
+    "treatmentDate": "2024-11-05",
+    "treatmentType": "Bridge Placement",
+    "doctor": "Dr. White",
+    "notes": "3-unit bridge for missing tooth",
+    "id": 15
+  },
+  {
+    "patientId": "PAT-015",
+    "treatmentDate": "2024-11-18",
+    "treatmentType": "Gum Treatment",
+    "doctor": "Dr. Harris",
+    "notes": "Periodontal therapy",
+    "id": 16
+  },
+  {
+    "patientId": "PAT-016",
+    "treatmentDate": "2024-12-02",
+    "treatmentType": "Dental Cleaning",
+    "doctor": "Dr. Clark",
+    "notes": "Preventive cleaning",
+    "id": 17
+  },
+  {
+    "patientId": "PAT-017",
+    "treatmentDate": "2024-12-10",
+    "treatmentType": "Filling",
+    "doctor": "Dr. Lewis",
+    "notes": "Composite restoration",
+    "id": 18
+  },
+  {
+    "patientId": "PAT-018",
+    "treatmentDate": "2024-12-15",
+    "treatmentType": "Orthodontic Treatment",
+    "doctor": "Dr. Walker",
+    "notes": "Braces adjustment",
+    "id": 19
+  },
+  {
+    "patientId": "PAT-019",
+    "treatmentDate": "2024-12-20",
+    "treatmentType": "Crown Replacement",
+    "doctor": "Dr. Hall",
+    "notes": "Replaced old crown on tooth 15",
+    "id": 20
+  },
+  {
+    "patientId": "PAT-020",
+    "treatmentDate": "2024-12-22",
+    "treatmentType": "Emergency Treatment",
+    "doctor": "Dr. Allen",
+    "notes": "Pain relief and temporary filling",
+    "id": 21
+  },
+  {
+    "patientId": "PAT-005",
+    "treatmentDate": "2024-10-25",
+    "treatmentType": "Follow-up",
+    "doctor": "Dr. Wilson",
+    "notes": "Crown check and adjustment",
+    "id": 22
+  },
+  {
+    "patientId": "PAT-010",
+    "treatmentDate": "2024-12-05",
+    "treatmentType": "Implant Crown",
+    "doctor": "Dr. Martinez",
+    "notes": "Crown placement on implant",
+    "id": 23
+  },
+  {
+    "patientId": "PAT-001",
+    "treatmentDate": "2025-08-10",
+    "treatmentType": "RCT",
+    "doctor": "Dr.Joe",
+    "notes": "25 - RCT",
+    "id": 24
+  }
+]

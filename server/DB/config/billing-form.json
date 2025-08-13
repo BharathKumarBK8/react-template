@@ -1,0 +1,82 @@
+{
+  "buttons": [
+    {
+      "id": "form_clear",
+      "type": "button",
+      "text": "Clear",
+      "modes": ["add", "edit"]
+    },
+    {
+      "id": "form_cancel",
+      "type": "button",
+      "text": "Cancel",
+      "modes": ["add", "edit", "view"],
+      "path": "/treatments/:treatmentId/billings"
+    },
+    {
+      "id": "form_save_and_navigate",
+      "type": "button",
+      "text": "Save & Continue to Invoice",
+      "modes": ["add", "edit"],
+      "path": "/patient/records/<patientId>/invoices/add"
+    }
+  ],
+  "title": "Billing Details",
+  "rowLayouts": [
+    {
+      "columns": [
+        {
+          "size": { "xl": 12, "lg": 12, "md": 12, "sm": 12 },
+          "elements": [
+            {
+              "name": "billing-form",
+              "type": "form",
+              "content": {
+                "id": "billing-form",
+                "formApi": {
+                  "getUrl": "billing-data",
+                  "postUrl": "billing-data",
+                  "updateUrl": "billing-data/<id>"
+                },
+                "fields": [
+                  {
+                    "type": "textbox",
+                    "content": {
+                      "name": "patientId",
+                      "inputType": "text",
+                      "placeholder": "Enter patient ID",
+                      "title": { "text": "Patient ID" },
+                      "validation": { "required": true }
+                    },
+                    "size": { "xl": 0, "lg": 0, "md": 0, "sm": 0 }
+                  },
+                  {
+                    "type": "textbox",
+                    "content": {
+                      "name": "amount",
+                      "inputType": "number",
+                      "placeholder": "Enter billing amount",
+                      "title": { "text": "Amount" },
+                      "validation": { "required": true }
+                    },
+                    "size": { "xl": 6, "lg": 6, "md": 12, "sm": 12 }
+                  },
+                  {
+                    "type": "textbox",
+                    "content": {
+                      "name": "description",
+                      "inputType": "textarea",
+                      "placeholder": "Enter billing description",
+                      "title": { "text": "Description" }
+                    },
+                    "size": { "xl": 12, "lg": 12, "md": 12, "sm": 12 }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

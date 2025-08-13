@@ -1,5 +1,5 @@
 {
- "buttons": [
+  "buttons": [
     {
       "id": "form_clear",
       "type": "button",
@@ -18,7 +18,7 @@
       "type": "button",
       "text": "Cancel",
       "modes": ["add", "edit", "view"],
-      "style": {  
+      "style": {
         "backgroundColor": "#dc3545",
         "textColor": "#fff",
         "borderColor": "#dc3545",
@@ -42,9 +42,9 @@
       "path": "/patients/records"
     },
     {
-      "id": "form_print",
+      "id": "form_navigate",
       "type": "button",
-      "text": "Print",
+      "text": "Add New Treatment",
       "modes": ["view"],
       "style": {
         "backgroundColor": "#007bff",
@@ -52,7 +52,8 @@
         "borderColor": "#007bff",
         "boxShadow": "none",
         "gradient": "none"
-      }
+      },
+      "path": "/patients/records/<patientId>/treatments/add"
     }
   ],
   "title": "Patient Record Details",
@@ -73,11 +74,41 @@
               "content": {
                 "id": "patient-record-form",
                 "formApi": {
-                  "getUrl": "patientrecords-data",
-                  "postUrl": "patientrecords-data",
-                  "updateUrl": "patientrecords-data/<id>"
+                  "getUrl": "patient-records-data",
+                  "postUrl": "patient-records-data",
+                  "updateUrl": "patient-records-data/<id>"
                 },
                 "fields": [
+                  {
+                    "type": "textbox",
+                    "content": {
+                      "name": "patientId",
+                      "inputType": "text",
+                      "placeholder": "Enter patient ID",
+                      "position": "horizontal",
+                      "value": "",
+                      "title": {
+                        "text": "Patient ID"
+                      },
+                      "validation": {
+                        "required": true,
+                        "type_check": true
+                      },
+                      "onError": {
+                        "position": "below",
+                        "message": {
+                          "required": "Patient ID is required",
+                          "type_check": "Invalid format"
+                        }
+                      }
+                    },
+                    "size": {
+                      "xl": 6,
+                      "lg": 6,
+                      "md": 12,
+                      "sm": 12
+                    }
+                  },
                   {
                     "type": "textbox",
                     "content": {
@@ -108,7 +139,7 @@
                       "sm": 12
                     }
                   },
-                                    {
+                  {
                     "type": "dropdown",
                     "size": {
                       "xl": 6,
@@ -229,10 +260,9 @@
         }
       ]
     },
-        {
+    {
       "columns": [
         {
-          
           "size": {
             "xl": 12,
             "lg": 12,
@@ -241,78 +271,73 @@
           },
           "elements": [
             {
-  "type": "table",
-  "content": {
-    "options": {
-      "title": {
-        "text": "Treatment History"
-      },
-      "columns": [
-        {
-          "type": "datetime",
-          "label": "Treatment Date",
-          "name": "treatmentDate",
-          "showSort": true,
-          "showFilter": true,
-          "filter": {
-            "showMenu": true,
-            "showDropdown": false,
-            "dropdownData": []
-          }
-        },
-        {
-          "type": "text",
-          "label": "Treatment Type",
-          "name": "treatmentType",
-          "showSort": true,
-          "showFilter": true,
-          "filter": {
-            "showMenu": true,
-            "showDropdown": false,
-            "dropdownData": []
-          }
-        },
-        {
-          "type": "text",
-          "label": "Doctor",
-          "name": "doctor",
-          "showSort": true,
-          "showFilter": true,
-          "filter": {
-            "showMenu": true,
-            "showDropdown": false,
-            "dropdownData": []
-          }
-        },
-        {
-          "type": "text",
-          "label": "Notes",
-          "name": "notes",
-          "showSort": true,
-          "showFilter": true,
-          "filter": {
-            "showMenu": true,
-            "showDropdown": false,
-            "dropdownData": []
-          }
-        }
-      ],
-      "actions": {
-        "show": true,
-        "header": "Actions",
-        "buttons": [
-          "view",
-          "edit",
-          "delete"
-        ]
-      }
-    },
-    "data": {
-      "url": "patient-treatments-data"
-    }
-  }
-}
-
+              "type": "table",
+              "content": {
+                "options": {
+                  "title": {
+                    "text": "Treatment History"
+                  },
+                  "columns": [
+                    {
+                      "type": "datetime",
+                      "label": "Treatment Date",
+                      "name": "treatmentDate",
+                      "showSort": true,
+                      "showFilter": true,
+                      "filter": {
+                        "showMenu": true,
+                        "showDropdown": false,
+                        "dropdownData": []
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "label": "Treatment Type",
+                      "name": "treatmentType",
+                      "showSort": true,
+                      "showFilter": true,
+                      "filter": {
+                        "showMenu": true,
+                        "showDropdown": false,
+                        "dropdownData": []
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "label": "Doctor",
+                      "name": "doctor",
+                      "showSort": true,
+                      "showFilter": true,
+                      "filter": {
+                        "showMenu": true,
+                        "showDropdown": false,
+                        "dropdownData": []
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "label": "Notes",
+                      "name": "notes",
+                      "showSort": true,
+                      "showFilter": true,
+                      "filter": {
+                        "showMenu": true,
+                        "showDropdown": false,
+                        "dropdownData": []
+                      }
+                    }
+                  ],
+                  "actions": {
+                    "show": true,
+                    "header": "Actions",
+                    "buttons": ["view", "edit", "delete"]
+                  }
+                },
+                "data": {
+                  "url": "patient-treatment-data"
+                }
+              }
+            }
           ]
         }
       ]

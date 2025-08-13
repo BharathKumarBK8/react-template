@@ -40,7 +40,9 @@ export interface TextboxProps {
   data: TEXTBOX_DATA;
 }
 
-  const TextArea = forwardRef<FormFieldRef, TextboxProps>(({ data }, ref) => {
+const TextArea = forwardRef<FormFieldRef, TextboxProps>(({ data }, ref) => {
+  console.log("TextBox data:", data.name, "disabled:", data.disabled); // Add this line
+
   const [inputValue, setInputValue] = useState<string | boolean>("");
   const [error, setError] = useState<ErrorModel | null>(null);
   const [localKey, setLocalKey] = useState<string>("initial");
@@ -78,14 +80,12 @@ export interface TextboxProps {
 
   // Initialize and update input value when data.value changes
   useEffect(() => {
-    console.log("Setting value on mount or update:", data.name, data.value);
     if (data.value !== undefined) {
       if (data.inputType === "inputtoggle") {
         setInputValue(data.value === true || data.value === "yes");
       } else if (data.inputType === "mask" && typeof data.value === "string") {
         setLocalKey(`${data.name}-${Date.now()}`);
         setInputValue(data.value);
-        console.log("inputValue state after set:", data.value);
       } else {
         setInputValue(data.value);
       }
@@ -106,12 +106,6 @@ export interface TextboxProps {
   };
 
   const updateValue = (newValue: string | boolean) => {
-    console.log("TextArea - Value changing:", {
-      name: data.name,
-      oldValue: inputValue,
-      newValue: newValue,
-    });
-
     if (error) {
       const validationError = validateInput(
         newValue.toString(),
@@ -132,8 +126,6 @@ export interface TextboxProps {
     );
     setError(validationError);
   };
-
-  console.log("InputMask render value:", inputValue);
 
   return (
     <div className="form-group">
@@ -167,6 +159,7 @@ export interface TextboxProps {
           onChange={handleChange}
           onBlur={handleBlur}
           className={`${error ? "p-invalid" : ""}`}
+          disabled={data.disabled ?? false}
         />
       ) : data.inputType === "description" ? (
         <InputTextarea
@@ -176,6 +169,7 @@ export interface TextboxProps {
           value={typeof inputValue === "string" ? inputValue : ""}
           onChange={handleChange}
           onBlur={handleBlur}
+          disabled={data.disabled ?? false}
         />
       ) : (
         <InputText
@@ -185,7 +179,7 @@ export interface TextboxProps {
           value={typeof inputValue === "string" ? inputValue : ""}
           onChange={handleChange}
           onBlur={handleBlur}
-          disabled={data.disabled}
+          disabled={data.disabled ?? false}
         />
       )}
 
